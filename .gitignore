@@ -2,6 +2,7 @@
 .classpath
 .settings/
 .project
+.gitignore
 
 # Compiled class file
 *.class
