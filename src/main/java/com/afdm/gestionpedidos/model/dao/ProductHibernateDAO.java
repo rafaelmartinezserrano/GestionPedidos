@@ -7,6 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import com.afdm.gestionpedidos.model.Product
 
+import jakarta.persistence.TypedQuery;
+
 public class ProductHibernateDAO implements ProductDAO {
 
 	@Override
@@ -33,8 +35,26 @@ public class ProductHibernateDAO implements ProductDAO {
 
 	@Override
 	public List<Product> findProductByName(String productName) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Product> products = null;
+		
+		Session session = DaoUtility.getSession();
+		Transaction transaction = session.beginTransaction();
+		
+		try {
+			
+			TypedQuery<Product> query = session.createQuery("FROM product WHERE productName LIKE :productname", Product.class)
+			query.setParameter("productName", productName + "%");
+			products = query.getResultList();
+			transaction.commit();
+					
+		} catch(HibernateException e) {
+			e.printStackTrace();
+			transaction.rollback();
+		}
+		
+		return products;
+
 	}
 
 	@Override
