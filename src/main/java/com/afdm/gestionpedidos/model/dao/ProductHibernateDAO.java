@@ -59,8 +59,25 @@ public class ProductHibernateDAO implements ProductDAO {
 
 	@Override
 	public List<Product> findProductByCategory(int categoryId) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Product> products = null;
+		
+		Session session = DaoUtility.getSession();
+		Transaction transaction = session.beginTransaction();
+		
+		try {
+			
+			TypedQuery<Product> query = session.createQuery("FROM product p WHERE category = :categoryId", Product.class)
+			query.setParameter("categoryId", categoryId);
+			products = query.getResultList();
+			transaction.commit();
+					
+		} catch(HibernateException e) {
+			e.printStackTrace();
+			transaction.rollback();
+		}
+		
+		return products;
 	}
 
 }
