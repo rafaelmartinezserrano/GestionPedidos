@@ -1,7 +1,7 @@
 package com.afdm.gestionpedidos.model.dao;
 
 import java.util.List;
-
+import com.afdm.gestionpedidos.model.Category;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
