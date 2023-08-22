@@ -5,7 +5,7 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import com.afdm.gestionpedidos.model.Product
+import com.afdm.gestionpedidos.model.Product;
 
 import jakarta.persistence.TypedQuery;
 
@@ -43,7 +43,7 @@ public class ProductHibernateDAO implements ProductDAO {
 		
 		try {
 			
-			TypedQuery<Product> query = session.createQuery("FROM product WHERE productName LIKE :productname", Product.class)
+			TypedQuery<Product> query = session.createQuery("FROM product WHERE productName LIKE :productname", Product.class);
 			query.setParameter("productName", productName + "%");
 			products = query.getResultList();
 			transaction.commit();
@@ -67,7 +67,7 @@ public class ProductHibernateDAO implements ProductDAO {
 		
 		try {
 			
-			TypedQuery<Product> query = session.createQuery("FROM product p WHERE category = :categoryId", Product.class)
+			TypedQuery<Product> query = session.createQuery("FROM product p WHERE category = :categoryId", Product.class);
 			query.setParameter("categoryId", categoryId);
 			products = query.getResultList();
 			transaction.commit();
