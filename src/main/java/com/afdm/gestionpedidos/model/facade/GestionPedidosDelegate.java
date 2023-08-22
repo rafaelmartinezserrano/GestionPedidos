@@ -6,7 +6,7 @@ import com.afdm.gestionpedidos.model.*;
 
 public interface GestionPedidosDelegate {
 
-	public boolean login();
+	public boolean login(String tipo, String nombre, String apellidos);
 	
 	public List<Product> findProductByCategory(int idCategory);
 	
