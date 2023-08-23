@@ -1,0 +1,39 @@
+@charset "ISO-8859-1";
+*{
+    justify-content: center;    
+}
+
+h2{
+    text-align: center;
+}
+#busqueda {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center
+}
+.button{
+    margin-top: 20px;
+
+}
+#fotoPrincipal{
+    width: 15%;
+    height: auto;
+    display: block; 
+  	margin: 0 auto;
+  	padding-top: 30px;
+  	padding-bottom: 30px;
+}
+#divFotoPrincipal {
+	margin-bottom: 15px;
+}
+.nav-item {
+	text-align: right;
+	padding-top: 30px;
+}
+#footer {
+	margin-top: 200px;
+}
+#divProductos {
+	padding-top: 30px;
+}
