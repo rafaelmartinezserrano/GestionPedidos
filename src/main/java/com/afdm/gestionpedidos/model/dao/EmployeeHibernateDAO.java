@@ -1,14 +1,11 @@
 package com.afdm.gestionpedidos.model.dao;
 
 import java.util.List;
-
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
 import com.afdm.gestionpedidos.model.Employee;
-
 import jakarta.persistence.TypedQuery;
 
 public class EmployeeHibernateDAO implements EmployeeDAO{

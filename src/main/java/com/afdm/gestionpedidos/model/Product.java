@@ -2,9 +2,23 @@ package com.afdm.gestionpedidos.model;
 
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Product")
 public class Product {
-	private Category category;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int productID;
+	@ManyToOne
+	@JoinColumn(name="categoryID")
+	private Category category;
 	private String productName;
 	private int quantityPerUnit;
 	private double unitPrice;

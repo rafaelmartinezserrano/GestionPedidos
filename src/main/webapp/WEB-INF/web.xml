@@ -14,4 +14,14 @@
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
+  <servlet>
+    <description></description>
+    <display-name>IniciarSesion</display-name>
+    <servlet-name>IniciarSesion</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.IniciarSesion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IniciarSesion</servlet-name>
+    <url-pattern>/IniciarSesion</url-pattern>
+  </servlet-mapping>
 </web-app>
