@@ -22,7 +22,7 @@ public class Product {
 	private String productName;
 	private int quantityPerUnit;
 	private double unitPrice;
-	private int unitsIntStock;
+	private int unitsInStock;
 	private int unitsOnOrder;
 	private String reorderLevel;
 	private boolean discontinued;
@@ -37,7 +37,7 @@ public class Product {
 		this.productName = productName;
 		this.quantityPerUnit = quantityPerUnit;
 		this.unitPrice = unitPrice;
-		this.unitsIntStock = unitsIntStock;
+		this.unitsInStock = unitsIntStock;
 		this.unitsOnOrder = unitsOnOrder;
 		this.reorderLevel = reorderLevel;
 		this.discontinued = discontinued;
@@ -49,7 +49,7 @@ public class Product {
 		this.productName = productName;
 		this.quantityPerUnit = quantityPerUnit;
 		this.unitPrice = unitPrice;
-		this.unitsIntStock = unitsIntStock;
+		this.unitsInStock = unitsIntStock;
 		this.unitsOnOrder = unitsOnOrder;
 		this.reorderLevel = reorderLevel;
 		this.discontinued = discontinued;
@@ -96,11 +96,11 @@ public class Product {
 	}
 
 	public int getUnitsIntStock() {
-		return unitsIntStock;
+		return unitsInStock;
 	}
 
 	public void setUnitsIntStock(int unitsIntStock) {
-		this.unitsIntStock = unitsIntStock;
+		this.unitsInStock = unitsIntStock;
 	}
 
 	public int getUnitsOnOrder() {
@@ -147,7 +147,7 @@ public class Product {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Product [category=").append(category.getCategoryName()).append(", productID=").append(productID)
 				.append(", productName=").append(productName).append(", quantityPerUnit=").append(quantityPerUnit)
-				.append(", unitPrice=").append(unitPrice).append(", unitsIntStock=").append(unitsIntStock)
+				.append(", unitPrice=").append(unitPrice).append(", unitsIntStock=").append(unitsInStock)
 				.append(", unitsOnOrder=").append(unitsOnOrder).append(", reorderLevel=").append(reorderLevel)
 				.append(", discontinued=").append(discontinued).append("]");
 		return builder.toString();
