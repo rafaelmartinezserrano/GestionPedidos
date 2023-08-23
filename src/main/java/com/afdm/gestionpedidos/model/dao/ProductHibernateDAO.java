@@ -5,6 +5,8 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import com.afdm.gestionpedidos.model.Category;
 import com.afdm.gestionpedidos.model.Product;
 
 import jakarta.persistence.TypedQuery;
@@ -43,7 +45,7 @@ public class ProductHibernateDAO implements ProductDAO {
 		
 		try {
 			
-			TypedQuery<Product> query = session.createQuery("FROM product WHERE productName LIKE :productname AND discontinued = TRUE", Product.class);
+			TypedQuery<Product> query = session.createQuery("FROM Product WHERE productName LIKE :productname AND discontinued = FALSE", Product.class);
 			query.setParameter("productName", productName + "%");
 			products = query.getResultList();
 			transaction.commit();
@@ -60,6 +62,8 @@ public class ProductHibernateDAO implements ProductDAO {
 	@Override
 	public List<Product> findProductByCategory(int categoryId) {
 		
+		Category category = new Category(categoryId, null, null);
+		
 		List<Product> products = null;
 		
 		Session session = DaoUtility.getSession();
@@ -67,8 +71,8 @@ public class ProductHibernateDAO implements ProductDAO {
 		
 		try {
 			
-			TypedQuery<Product> query = session.createQuery("FROM product p WHERE category = :categoryId AND discontinued = TRUE", Product.class);
-			query.setParameter("categoryId", categoryId);
+			TypedQuery<Product> query = session.createQuery("FROM Product p WHERE category = :category AND discontinued = FALSE", Product.class);
+			query.setParameter("category", category);
 			products = query.getResultList();
 			transaction.commit();
 					
