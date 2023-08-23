@@ -8,51 +8,36 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 import com.afdm.gestionpedidos.model.facade.GestionPedidosDelegate;
-
-
+import com.afdm.gestionpedidos.model.facade.GestionPedidosFacade;
 
 /**
  * Servlet implementation class IniciarSesion
  */
 public class IniciarSesion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * 
-     */
-    public IniciarSesion() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String tipo = request.getParameter("tipo");
-		String nombre = request.getParameter("firstName");
-		String apellidos = request.getParameter("lastName");
-		String customerID = request.getParameter("customerID");
-		GestionPedidosDelegate fachada = null;
-		try {
-		fachada.login(tipo, nombre, apellidos);
-			if (employee != null) {
-				request.getSession().setAttribute("employee", employee);
-				response.sendRedirect("principal.jsp");
-			} else {
-				request.setAttribute("Error", "Datos no encontrados.");
-				request.getRequestDispatcher("index.jsp").forward(request, response);
-			}
-		} catch (ConexionException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		String nombre = request.getParameter("nombreEmpleado");
+		String apellidos = request.getParameter("apellidosEmpleado");
+		String customerID = request.getParameter("nombreCliente");
+		GestionPedidosDelegate fachada = new GestionPedidosFacade();
+		boolean login = false;
+		if (tipo.equals("employee")) {
+			login = fachada.login(tipo, nombre, apellidos);
+		} else {
+			login = fachada.login(tipo, customerID, null);
 		}
-				
+		if (login) {
+			request.getSession().setAttribute("usuario", nombre);
+			response.sendRedirect("principal.jsp");
+		} else {
+			request.setAttribute("Error", "Datos no encontrados.");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
+		}
+
 	}
 
-	
-	}
-
-
+}

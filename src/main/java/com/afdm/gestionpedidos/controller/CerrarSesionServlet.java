@@ -1,4 +1,4 @@
-package com.afdm.gestionpedidos.model.controller;
+package com.afdm.gestionpedidos.controller;
 
 import java.io.IOException;
 

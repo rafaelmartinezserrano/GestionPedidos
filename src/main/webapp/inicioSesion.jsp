@@ -40,9 +40,9 @@
           <div> 
               
                <label for="inputEmpleado" class="form-label">Empleado</label>
-               <input type="radio" value="Empleado" name="empleado" id="inputEmpleado" onclick="visibilidad();"/>
+               <input type="radio" value="employee" name="tipo" id="inputEmpleado" onclick="visibilidad();"/>
                <label for="inputCliente" class="form-label">Cliente</label>
-               <input type="radio" value="Cliente" name="empleado" id="inputCliente" checked onclick="visibilidad();"/>
+               <input type="radio" value="customer" name="tipo" id="inputCliente" checked onclick="visibilidad();"/>
 
           </div>
          
