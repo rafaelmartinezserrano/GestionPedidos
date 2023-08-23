@@ -14,24 +14,4 @@
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
-    <servlet>
-    <description></description>
-    <display-name>IniciarSesionServlet</display-name>
-    <servlet-name>IniciarSesionServlet</servlet-name>
-    <servlet-class>com.afdm.gestionpedidos.controller.IniciarSesionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>IniciarSesionServlet</servlet-name>
-    <url-pattern>/IniciarSesion</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>FindProductByCategoryServlet</display-name>
-    <servlet-name>FindProductByCategoryServlet</servlet-name>
-    <servlet-class>com.afdm.gestionpedidos.controller.FindProductByCategoryServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>FindProductByCategoryServlet</servlet-name>
-    <url-pattern>/FindProductByCategory</url-pattern>
-  </servlet-mapping>
 </web-app>
