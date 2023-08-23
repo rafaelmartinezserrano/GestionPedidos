@@ -7,6 +7,7 @@ import java.util.List;
 import com.afdm.gestionpedidos.model.Employee;
 import com.afdm.gestionpedidos.model.Product;
 import com.afdm.gestionpedidos.model.facade.GestionPedidosDelegate;
+import com.afdm.gestionpedidos.model.facade.GestionPedidosFacade;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.servlet.ServletException;
@@ -28,7 +29,7 @@ public class FindProductByCategoryServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String busqueda = request.getParameter("busquedaCategory");
 		//Employee employee = (Employee) request.getSession().getAttribute("");
-		GestionPedidosDelegate fachada = new GestionPedidosDelegate();
+		GestionPedidosDelegate fachada = new GestionPedidosFacade();
 		
 		//pasar busqueda de String a int, para meterlo como parametro cuando llamo al metodo de la fachada
 		int busquedaIdCategory = Integer.parseInt(busqueda);
