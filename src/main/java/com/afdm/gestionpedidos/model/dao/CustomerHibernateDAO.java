@@ -17,8 +17,6 @@ public class CustomerHibernateDAO implements CustomerDAO{
 	@Override
 	public Customer findCustomerById(String customerId) {
 		Customer customer = null;
-		Configuration conf = new Configuration();
-		conf.configure();//leyendo el fichero hibernate.cfg.xml
 		Session session = DaoUtility.getSession();
 		Transaction transaction = session.beginTransaction();
 		try {
@@ -35,8 +33,6 @@ public class CustomerHibernateDAO implements CustomerDAO{
 	@Override
 	public List<Customer> findCustomerByCompanyName(String companyName) {
 		List<Customer> customersByCompanyNameList = new ArrayList<>();
-		Configuration conf = new Configuration();
-		conf.configure();//leyendo el fichero hibernate.cfg.xml
 		Session session = DaoUtility.getSession();
 		Transaction transaction = session.beginTransaction();
 		try {
@@ -55,8 +51,6 @@ public class CustomerHibernateDAO implements CustomerDAO{
 	@Override
 	public List<Customer> findAllCustomer() {
 		List<Customer> customersList = new ArrayList<>();
-		Configuration conf = new Configuration();
-		conf.configure();//leyendo el fichero hibernate.cfg.xml
 		Session session = DaoUtility.getSession();
 		Transaction transaction = session.beginTransaction();
 		try {
