@@ -20,7 +20,7 @@ public class Product {
 	@JoinColumn(name="categoryID")
 	private Category category;
 	private String productName;
-	private int quantityPerUnit;
+	private String quantityPerUnit;
 	private double unitPrice;
 	private int unitsInStock;
 	private int unitsOnOrder;
@@ -29,7 +29,7 @@ public class Product {
 	
 	public Product() {}
 
-	public Product(Category category, int productID, String productName, int quantityPerUnit, double unitPrice,
+	public Product(Category category, int productID, String productName, String quantityPerUnit, double unitPrice,
 			int unitsIntStock, int unitsOnOrder, String reorderLevel, boolean discontinued) {
 		
 		this.category = category;
@@ -42,7 +42,7 @@ public class Product {
 		this.reorderLevel = reorderLevel;
 		this.discontinued = discontinued;
 	}
-	public Product(Category category,String productName, int quantityPerUnit, double unitPrice,
+	public Product(Category category,String productName, String quantityPerUnit, double unitPrice,
 			int unitsIntStock, int unitsOnOrder, String reorderLevel, boolean discontinued) {
 		
 		this.category = category;
@@ -79,11 +79,11 @@ public class Product {
 		this.productName = productName;
 	}
 
-	public int getQuantityPerUnit() {
+	public String getQuantityPerUnit() {
 		return quantityPerUnit;
 	}
 
-	public void setQuantityPerUnit(int quantityPerUnit) {
+	public void setQuantityPerUnit(String quantityPerUnit) {
 		this.quantityPerUnit = quantityPerUnit;
 	}
 
