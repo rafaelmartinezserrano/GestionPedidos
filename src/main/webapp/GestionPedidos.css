@@ -3,34 +3,7 @@
     justify-content: center;    
 }
 
-#fotoCapa{
-    width: 25%;
-    height: auto;
-    display: block; /* torna a imagem um bloco para aplicar as margens */
-  margin: 0 auto;
-}
-h2{
-    text-align: center;
-}
-.fieldset{
-    /*margin-left: 350px;
-    margin-right: 350px;*/
-    display: flex;
-    justify-content: center
-}
-#inicioSeccion{
-    margin-top: 16px;
-}
-#form{
-    margin-bottom: 40px;
-}
-#TabelaCita{
-    margin-top: 40px;
-    margin-left: 120px;
-    margin-right: 120px;
-    margin-bottom: 100px;
-}
-#marcaCitaNueva{
+#busqueda{
     margin-top: 20px;
     /*margin-left: 120px;
     margin-right: 120px;*/
@@ -39,11 +12,7 @@ h2{
     justify-content: center;
 
 }
-#entrarPrincipal{
-    text-align: center;
-    margin-top: 4px;
-    
-}
+
 #fotoCapa2{
     width: 20%;
     height: auto;
@@ -55,8 +24,8 @@ h2{
     margin-top: 20px;
 
 }
-#fotoPrincipal{
-    width: 100%;
+#fotoPrincipalBusqueda{
+    width: 15%;
     height: auto;
     display: block; /* torna a imagem um bloco para aplicar as margens */
   margin: 0 auto;
@@ -67,11 +36,6 @@ h2{
 	margin-bottom: 15px;
 }
 
-.fieldset2{
-    margin-left: 350px;
-    margin-right: 350px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 45px;
+#final{
+	margin-top: 200px;
 }

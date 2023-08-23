@@ -16,31 +16,35 @@
 <body>
     
     <div id="nav">
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-ligth" style="background-color: #F279B2;">
         <div class="container-fluid">
           <a class="navbar-brand">Gestion de Pedidos</a>
-           
-          <form action="BuscarCategory.jsp" method="post" class="d-flex">
-            <input id="CajaTxt" class="form-control me-2" type="search" placeholder="Buscar Categoria" aria-label="Search" name="busquedaCategory">
-            <button class="btn btn-dark" type="button" onclick="imprimirCategory(lista);">Buscar</button>
-          </form> 
+       
+         
         </div>
       </nav>
       </div>
    	
 		  <div id="divFotoPrincipal">
-          <img id="fotoPrincipal" src="Imagenes/imgprincipal.png" class="img-fluid fotoPrincipal" alt="">
+          <img id="fotoPrincipalBusqueda" src="Imagenes/imgprincipal.png" class="img-fluid fotoPrincipal" alt="Imagen Principal">
         </div>
         
-       		<div id="listaCancionesDiv" class="fieldset "> </div>
-            <div id="divLetraCancion" class="fieldset2"></div>
-      <footer>
+        <fieldset id="busqueda">
+          <form action="BuscarCategory.jsp" method="post" class="d-flex">
+            <input id="CajaTxt" class="form-control me-2" type="search" placeholder="Buscar por Categoria" aria-label="Search" name="busquedaCategory">
+            <button class="btn btn-ligth" style="background-color: #F279B2;"  type="button" onclick="imprimirCategory(lista);">Buscar</button>
+          </form>
+          </fieldset>
+          
+       		<div id="listaCategoryDiv" class="fieldset "> </div>
+      
+      <footer id="final">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item"><a href="paginaInicial.html" class="nav-link px-2 text-muted">Inicio</a></li>
-            <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Apoyo</a></li>
+            <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Busqueda por categoria</a></li>
             <li class="nav-item"><a href="CerrarSession" class="nav-link px-2 text-muted">Salir</a></li>
           </ul>
-          <p class="text-center text-muted">© 2023</p> 
+          <p class="text-center text-muted">© 2023 AFDM</p> 
     </footer>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
