@@ -30,9 +30,9 @@
         </div>
         
         <fieldset id="busqueda">
-          <form action="FindProductByCategory" method="post" class="d-flex">
+          <form  class="d-flex">
             <input id="CajaTxt" class="form-control me-2" type="search" placeholder="Buscar por Categoria" aria-label="Search" name="busquedaCategory">
-            <button class="btn btn-ligth" style="background-color: #F279B2;"  type="button" onclick="imprimirCategory(lista);">Buscar</button>
+            <button class="btn btn-ligth" style="background-color: #F279B2;"  type="button" onclick="buscarCategory();">Buscar</button>
           </form>
           </fieldset>
           

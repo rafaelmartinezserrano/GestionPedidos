@@ -8,7 +8,7 @@
 	if(TxtBusqueda != ""){
 		axios.post(
 		//nome do SERVLET
-		"BuscarCancionesPorTitulo", 
+		"", 
 		null,
 		//chamar o parametro, passar tipo e valor, sempre com o nome  {params: {} } . 
 		{params: {busqueda: TxtBusqueda }}
@@ -24,14 +24,12 @@ function imprimirCategory (lista) {
 	console.log(lista);
 	let resultadoBusqueda = document.getElementById("listaCategoryDiv");
 	let textoCategory = "";
-	for (let category of lista ) {
+	for (let producto of lista ) {
 		textoCategory = textoCategory + 
 		`<div>
-			<span> Titulo: ${category.titulo}</span>
-			<audio controls="controls" controlsList="nodownload">
-				<source src="${"/"+ category.urlFichero}" type=""/> 
-			</audio>
-			<input type="button" value="Anadir al Carrito" class="btn btn-dark"/>
+			<span> Producto: ${producto.productName}</span>
+			<span> Precio: ${producto.unitPrice}</span>
+			<input type="button" value="Anadir al Carrito" class="btn btn-dark" onclick=""/>
          </div>`;
          
 	}
