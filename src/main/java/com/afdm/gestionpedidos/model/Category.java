@@ -1,8 +1,17 @@
 package com.afdm.gestionpedidos.model;
 
 import java.util.Objects;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name="Category")
 public class Category {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int categoryID;
 	private String categoryName;
 	private String description;

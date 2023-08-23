@@ -5,11 +5,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table(name="Orders")
 public class Orders {
-	private Customer customer;
-	private Employee employee;
-	private List<OrderDetail> orderDetail = new ArrayList<>();
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int orderID;
+	@ManyToOne
+	@JoinColumn(name="customerID")
+	private Customer customer;
+	@ManyToOne
+	@JoinColumn(name="employeeID")
+	private Employee employee;
+	@ManyToOne
+	@JoinColumn(name="idOrderDetail")
+	private List<OrderDetail> orderDetail = new ArrayList<>();
 	private LocalDate orderDate;
 	private LocalDate requiredDate;
 	private LocalDate shippedDate;
