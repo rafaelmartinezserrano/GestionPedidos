@@ -43,7 +43,7 @@ public class ProductHibernateDAO implements ProductDAO {
 		
 		try {
 			
-			TypedQuery<Product> query = session.createQuery("FROM product WHERE productName LIKE :productname AND discontinued = TRUE", Product.class);
+			TypedQuery<Product> query = session.createQuery("FROM Product WHERE productName LIKE :productname AND discontinued = FALSE", Product.class);
 			query.setParameter("productName", productName + "%");
 			products = query.getResultList();
 			transaction.commit();
@@ -67,7 +67,7 @@ public class ProductHibernateDAO implements ProductDAO {
 		
 		try {
 			
-			TypedQuery<Product> query = session.createQuery("FROM product p WHERE category = :categoryId AND discontinued = TRUE", Product.class);
+			TypedQuery<Product> query = session.createQuery("FROM Product p WHERE category = :categoryId AND discontinued = FALSE", Product.class);
 			query.setParameter("categoryId", categoryId);
 			products = query.getResultList();
 			transaction.commit();
