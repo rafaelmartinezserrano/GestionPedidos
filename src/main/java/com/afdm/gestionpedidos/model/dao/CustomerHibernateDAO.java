@@ -36,7 +36,7 @@ public class CustomerHibernateDAO implements CustomerDAO{
 		Session session = DaoUtility.getSession();
 		Transaction transaction = session.beginTransaction();
 		try {
-			TypedQuery<Customer> sentence = session.createQuery("select c from customer c where companyName like :name ", Customer.class);
+			TypedQuery<Customer> sentence = session.createQuery("select c from Customer c where companyName like :name", Customer.class);
 			sentence.setParameter("name", "%" + companyName + "%");
 			customersByCompanyNameList = sentence.getResultList();
 			transaction.commit();
@@ -54,7 +54,7 @@ public class CustomerHibernateDAO implements CustomerDAO{
 		Session session = DaoUtility.getSession();
 		Transaction transaction = session.beginTransaction();
 		try {
-			TypedQuery<Customer> sentence = session.createQuery("select c from customer c", Customer.class);
+			TypedQuery<Customer> sentence = session.createQuery("select c from Customer c", Customer.class);
 			customersList = sentence.getResultList();
 			transaction.commit();
 		} catch (HibernateException e) {
