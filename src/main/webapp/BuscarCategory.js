@@ -1,4 +1,4 @@
- document.getElementById("CajaTxt").addEventListener("keyup" , buscarCategory)
+// document.getElementById("CajaTxt").addEventListener("keyup" , buscarCategory)
  
  
  
@@ -8,7 +8,7 @@
 	if(TxtBusqueda != ""){
 		axios.post(
 		//nome do SERVLET
-		"", 
+		"FindProductByCategory", 
 		null,
 		//chamar o parametro, passar tipo e valor, sempre com o nome  {params: {} } . 
 		{params: {busqueda: TxtBusqueda }}

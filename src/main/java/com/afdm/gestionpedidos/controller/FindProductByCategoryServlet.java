@@ -27,11 +27,12 @@ public class FindProductByCategoryServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String busqueda = request.getParameter("busquedaCategory");
+		String busqueda = request.getParameter("busqueda");
 		//Employee employee = (Employee) request.getSession().getAttribute("");
 		GestionPedidosDelegate fachada = new GestionPedidosFacade();
 		
 		//pasar busqueda de String a int, para meterlo como parametro cuando llamo al metodo de la fachada
+		System.out.println(busqueda);
 		int busquedaIdCategory = Integer.parseInt(busqueda);
 		List<Product> lista = fachada.findProductByCategory(busquedaIdCategory);
 		ObjectMapper mapeador = new ObjectMapper();
