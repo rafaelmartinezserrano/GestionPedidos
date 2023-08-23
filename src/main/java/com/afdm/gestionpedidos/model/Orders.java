@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 
@@ -26,8 +27,7 @@ public class Orders {
 	@ManyToOne
 	@JoinColumn(name="employeeID")
 	private Employee employee;
-	@ManyToOne
-	@JoinColumn(name="idOrderDetail")
+	@OneToMany(mappedBy="order")
 	private List<OrderDetail> orderDetail = new ArrayList<>();
 	private LocalDate orderDate;
 	private LocalDate requiredDate;
