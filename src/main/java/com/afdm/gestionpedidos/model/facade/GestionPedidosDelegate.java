@@ -10,7 +10,7 @@ public interface GestionPedidosDelegate {
 	
 	public List<Product> findProductByCategory(int idCategory);
 	
-	public boolean createOrder(Order pedido);
+	public boolean createOrder(Orders pedido);
 	
 	public Product findProductById(int idProduct);
 	
