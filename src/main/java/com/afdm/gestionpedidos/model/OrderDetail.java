@@ -2,8 +2,24 @@ package com.afdm.gestionpedidos.model;
 
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+
+@Entity
+@Table(name="OrderDetail")
 public class OrderDetail {
+	@Id
+	
+	@Transient
 	private int idOrderDetail;
+	@ManyToOne
+	@JoinColumn(name="productID")
 	private Product product;
 	private double unitPrice;
 	private int quantity;
