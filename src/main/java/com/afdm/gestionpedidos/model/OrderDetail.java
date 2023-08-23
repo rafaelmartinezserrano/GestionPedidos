@@ -15,6 +15,7 @@ import jakarta.persistence.Transient;
 @Table(name="OrderDetail")
 public class OrderDetail {
 	@Transient
+	@Id
 	private int idOrderDetail;
 	@ManyToOne
 	@JoinColumn(name="productID")

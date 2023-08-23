@@ -49,24 +49,27 @@
          <div id="empleado" class="oculto">
          
          	<label for="nombreEmpleado" class="form-label">Nombre</label>
-            <input type="text" class="form-control" name="nombreEmpleado" id="nombreEmpleado" placeholder="Introduzca el nombre" required="required">
+            <input type="text" class="form-control" name="nombreEmpleado" id="nombreEmpleado" placeholder="Introduzca el nombre">
          	<label for="apellidosEmpleado" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" name="apellidosEmpleado" id="apellidosEmpleado" placeholder="Introduzca los apellidos" required="required">     
+            <input type="text" class="form-control" name="apellidosEmpleado" id="apellidosEmpleado" placeholder="Introduzca los apellidos">     
      
          </div>
           <div id="cliente">
          
          	<label for="idCliente" class="form-label">Añadir Id:</label>
-            <input type="text" class="form-control" name="nombreCliente" id="idCliente" placeholder="Introduzca el id" 	required="required" />
+            <input type="text" class="form-control" name="nombreCliente" id="idCliente" placeholder="Introduzca el id"/>
          	 
      
          </div>
          
         
-          <button id="entrada" type="submit" class="btn btn-dark" >Entrar</button>
+          <input type="submit" value="Iniciar Sesión"/>
          
+         <% String error = (String)request.getAttribute("error"); %>
           <div>
-          		
+          		<% if (error != null) { %>
+          			<span><%=error %></span>
+          		<% } %>
           </div>
          			
          
@@ -79,5 +82,6 @@
           <p class="text-center text-muted">© 2023</p> 
     </footer>
     <script type="text/javascript" src="inicioSesion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

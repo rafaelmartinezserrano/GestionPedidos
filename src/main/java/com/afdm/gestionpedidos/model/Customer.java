@@ -12,8 +12,7 @@ import jakarta.persistence.Table;
 @Table(name="Customer")
 public class Customer {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int customerID;
+	private String customerID;
 	private String companyName;
 	private String contactName;
 	private String contactTitle;
@@ -26,7 +25,7 @@ public class Customer {
 	private String fax;
 	
 	public Customer () {}
-	public Customer(int customerID, String companyName, String contactName, String contactTitle, String address,
+	public Customer(String customerID, String companyName, String contactName, String contactTitle, String address,
 			String city, String region, String postalCode, String country, String phone, String fax) {
 		this.customerID = customerID;
 		this.companyName = companyName;
@@ -54,10 +53,10 @@ public class Customer {
 		this.phone = phone;
 		this.fax = fax;
 	}
-	public int getCustomerID() {
+	public String getCustomerID() {
 		return customerID;
 	}
-	public void setCustomerID(int customerID) {
+	public void setCustomerID(String customerID) {
 		this.customerID = customerID;
 	}
 	public String getCompanyName() {

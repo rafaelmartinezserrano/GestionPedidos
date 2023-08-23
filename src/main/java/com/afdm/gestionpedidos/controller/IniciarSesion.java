@@ -19,10 +19,12 @@ public class IniciarSesion extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	
 		String tipo = request.getParameter("tipo");
 		String nombre = request.getParameter("nombreEmpleado");
 		String apellidos = request.getParameter("apellidosEmpleado");
 		String customerID = request.getParameter("nombreCliente");
+		System.out.println(tipo);
 		GestionPedidosDelegate fachada = new GestionPedidosFacade();
 		boolean login = false;
 		if (tipo.equals("employee")) {
@@ -34,8 +36,8 @@ public class IniciarSesion extends HttpServlet {
 			request.getSession().setAttribute("usuario", nombre);
 			response.sendRedirect("principal.jsp");
 		} else {
-			request.setAttribute("Error", "Datos no encontrados.");
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			request.setAttribute("error", "Datos no encontrados.");
+			request.getRequestDispatcher("inicioSesion.jsp").forward(request, response);
 		}
 
 	}

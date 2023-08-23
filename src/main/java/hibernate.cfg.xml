@@ -24,7 +24,12 @@
 
 		<!-- <mapping resource="empleado.hbm.xml"/> -->
 		<!-- <mapping class="com.afdm.hibernate.model.Empleado"/> -->
-
+		<mapping class="com.afdm.gestionpedidos.model.Customer"/>
+		<mapping class="com.afdm.gestionpedidos.model.Employee"/>
+		<!--<mapping class="com.afdm.gestionpedidos.model.Orders"/>-->
+		<!--<mapping class="com.afdm.gestionpedidos.model.OrderDetail"/>-->
+		<mapping class="com.afdm.gestionpedidos.model.Category"/>
+		<mapping class="com.afdm.gestionpedidos.model.Product"/>
 	</session-factory>
 
 </hibernate-configuration>
