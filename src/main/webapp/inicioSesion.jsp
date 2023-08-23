@@ -9,7 +9,7 @@
     <link type="image/x-icon" rel="icon" href="imagen/favicon.png"/>
     <title>Gestion Pedidos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="GestionPedidos.css" type="text/css">
+    <link rel="stylesheet" href="inicioSesion.css" type="text/css">
 </head>
   <body>
     <div id="nav">
@@ -78,6 +78,6 @@
        
           <p class="text-center text-muted">© 2023</p> 
     </footer>
-    <script type="text/javascript" src="GestionPedido.js"></script>
+    <script type="text/javascript" src="inicioSesion.js"></script>
 </body>
 </html>
