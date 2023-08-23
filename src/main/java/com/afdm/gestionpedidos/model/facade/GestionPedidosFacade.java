@@ -6,10 +6,14 @@ import com.afdm.gestionpedidos.model.Customer;
 import com.afdm.gestionpedidos.model.Employee;
 import com.afdm.gestionpedidos.model.Orders;
 import com.afdm.gestionpedidos.model.Product;
+import com.afdm.gestionpedidos.model.dao.CategoryDAO;
 import com.afdm.gestionpedidos.model.dao.CustomerDAO;
 import com.afdm.gestionpedidos.model.dao.CustomerHibernateDAO;
 import com.afdm.gestionpedidos.model.dao.EmployeeDAO;
 import com.afdm.gestionpedidos.model.dao.EmployeeHibernateDAO;
+import com.afdm.gestionpedidos.model.dao.OrderDAO;
+import com.afdm.gestionpedidos.model.dao.OrderHibernateDAO;
+import com.afdm.gestionpedidos.model.dao.ProductDAO;
 import com.afdm.gestionpedidos.model.dao.ProductHibernateDAO;
 
 public class GestionPedidosFacade implements GestionPedidosDelegate {
@@ -31,23 +35,22 @@ public class GestionPedidosFacade implements GestionPedidosDelegate {
 
 	@Override
 	public List<Product> findProductByCategory(int idCategory) {
+		ProductDAO dao = new ProductHibernateDAO();
+		return dao.findProductByCategory(idCategory);
 		
-		return null;
 	}
 
 	@Override
 	public boolean createOrder(Orders pedido) {
-
-		return false;
+		OrderDAO dao = new OrderHibernateDAO();
+		return dao.createOrder(pedido);		
 	}
 
 	@Override
 	public Product findProductById(int idProduct) {
-
-		return null;
+		ProductDAO dao = new ProductHibernateDAO();
+		return dao.findProductById(idProduct);	
 	}
-
-
 
 
 }
