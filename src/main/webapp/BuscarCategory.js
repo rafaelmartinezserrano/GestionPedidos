@@ -22,19 +22,18 @@
 
 function imprimirCategory (lista) {
 	console.log(lista);
-	let resultadoBusqueda = document.getElementById("listaCancionesDiv");
-	let textoAudio = "";
-	for (let cancion of lista ) {
-		textoAudio = textoAudio + 
+	let resultadoBusqueda = document.getElementById("listaCategoryDiv");
+	let textoCategory = "";
+	for (let category of lista ) {
+		textoCategory = textoCategory + 
 		`<div>
-			<span> Titulo: ${cancion.titulo}</span>
+			<span> Titulo: ${category.titulo}</span>
 			<audio controls="controls" controlsList="nodownload">
-				<source src="${"Canciones/"+ cancion.urlFichero}" type="audio/mpeg"/> 
+				<source src="${"/"+ category.urlFichero}" type=""/> 
 			</audio>
-			<input type="button" value="Borrar" class="btn btn-danger" onclick="borrarCancion(${cancion.idCancion}, '${cancion.urlFichero}');"/>
-			<input type="button" value="Ver Letra" class="btn btn-dark" onclick="letraCancion('${cancion.titulo}');"/>
+			<input type="button" value="Anadir al Carrito" class="btn btn-dark"/>
          </div>`;
          
 	}
-	resultadoBusqueda.innerHTML = textoAudio;
+	resultadoBusqueda.innerHTML = textoCategory;
 }

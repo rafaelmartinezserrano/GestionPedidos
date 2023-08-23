@@ -30,11 +30,12 @@
         </div>
         
         <fieldset id="busqueda">
-          <form action="BuscarCategory.jsp" method="post" class="d-flex">
+          <form action="FindProductByCategory" method="post" class="d-flex">
             <input id="CajaTxt" class="form-control me-2" type="search" placeholder="Buscar por Categoria" aria-label="Search" name="busquedaCategory">
             <button class="btn btn-ligth" style="background-color: #F279B2;"  type="button" onclick="imprimirCategory(lista);">Buscar</button>
           </form>
           </fieldset>
+          
           
        		<div id="listaCategoryDiv" class="fieldset "> </div>
       
@@ -48,6 +49,6 @@
     </footer>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" src="buscarCanciones.js"></script>
+    <script type="text/javascript" src="BuscarCategory.js"></script>
     </html>
     
