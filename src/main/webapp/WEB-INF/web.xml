@@ -50,4 +50,14 @@
     <servlet-name>/NewCustomer</servlet-name>
     <servlet-class>com.afdm.gestionpedidos.controller.NewCustomerServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description></description>
+    <display-name>BusquedaCategoryServlet</display-name>
+    <servlet-name>BusquedaCategoryServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.BusquedaCategoryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BusquedaCategoryServlet</servlet-name>
+    <url-pattern>/BusquedaCategory</url-pattern>
+  </servlet-mapping>
 </web-app>
