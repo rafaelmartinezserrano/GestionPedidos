@@ -16,39 +16,30 @@
 
 </head>
 <body>
-    
     <div id="nav">
-    <nav class="navbar navbar-ligth" style="background-color: #F279B2;">
-        <div class="container-fluid">
-          <a class="navbar-brand">Gestion de Pedidos</a>
-       
-         
-        </div>
-      </nav>
-      </div>
-   	
-		  <div id="divFotoPrincipal">
-          <img id="fotoPrincipalBusqueda" src="Imagenes/imgprincipal.png" class="img-fluid fotoPrincipal" alt="Imagen Principal">
-        </div>
-        <% List<Category> lista=(List<Category>)request.getAttribute("categoryList"); %>
+    	<nav class="navbar navbar-ligth" style="background-color: #F279B2;">
+        	<div class="container-fluid">
+         		 <a class="navbar-brand">Gestion de Pedidos</a> 
+        	</div>
+      	</nav>
+  	</div>
+  	
+  <div id="divFotoPrincipal"> 
+     <img id="fotoPrincipalBusqueda" src="Imagenes/imgprincipal.png" class="img-fluid fotoPrincipal" alt="Imagen Principal">
+  </div>
+  
+	 <% List<Category> lista=(List<Category>)request.getAttribute("categoryList"); %>
         <fieldset id="busqueda">
           <form  class="d-flex" method="get">
         	  <select id="select" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" oninput="buscarCategory();">
 				 <% for (Category categoria:lista){ %>
 					 <option value="<%=categoria.getCategoryID()%>"><%=categoria.getCategoryName()%></option>
 				<%  } %>
-			</select>
-			
-            <!-- <input id="CajaTxt" class="form-control me-2" type="search" placeholder="Buscar por Categoria" aria-label="Search" name="busquedaCategory">
-              <button id="buscarButton" class="btn btn-ligth" style="background-color: #F279B2;"  type="button" onclick="buscarCategory();">Buscar</button>
-             -->
-            
-          </form>
-         
+				</select>
+          	</form>
           </fieldset>
           
-          
-       		<div id="listaCategoryDiv" class="fieldset "> </div>
+<div id="listaCategoryDiv" class="fieldset "> </div>
       
       <footer id="final">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -58,8 +49,8 @@
           </ul>
           <p class="text-center text-muted">© 2023 AFDM</p> 
     </footer>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" src="BuscarCategory.js"></script>
-    </html>
+</body>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script type="text/javascript" src="BuscarCategory.js"></script>
+</html>
     

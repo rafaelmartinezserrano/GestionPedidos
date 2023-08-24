@@ -41,11 +41,9 @@
 	margin-top: 150px;
 }
 #listaCategoryDiv{
-    margin-top: 20px;
-    /*margin-left: 120px;
-    margin-right: 120px;*/
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-
+	padding-top: 30px;
+	justify-content: center;
+	margin: auto;
+	width: 25%;
 }
+
