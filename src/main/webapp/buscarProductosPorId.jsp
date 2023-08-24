@@ -24,7 +24,7 @@
 	</div>
 	<main>
 		<div id="divFotoPrincipal">
-			<img id="fotoPrincipal" src="imgbusqueda.png"
+			<img id="fotoPrincipal" src="Imagenes/imgbusqueda.png"
 				class="img-fluid fotoPrincipal" alt="Imagen Principal">
 		</div>
 		<fieldset id="busqueda">
