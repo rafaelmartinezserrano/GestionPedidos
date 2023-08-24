@@ -32,7 +32,7 @@ public class Orders {
 	private LocalDate orderDate;
 	private LocalDate requiredDate;
 	private LocalDate shippedDate;
-	private String freight;
+	private  double freight;
 	private String shipName;
 	private String shipAddress;
 	private String shipCity;
@@ -43,7 +43,7 @@ public class Orders {
 	public Orders() {}
 
 	public Orders(Customer customer, Employee employee, List<OrderDetail> orderDetail, int orderID, LocalDate orderDate,
-			LocalDate requiredDate, LocalDate shippedDate, String freight, String shipName, String shipAddress,
+			LocalDate requiredDate, LocalDate shippedDate, double freight, String shipName, String shipAddress,
 			String shipCity, String shipRegion, String shipPostalCode, String shipCountry) {
 		
 		this.customer = customer;
@@ -63,7 +63,7 @@ public class Orders {
 	}
 	
 	public Orders(Customer customer, Employee employee, List<OrderDetail> orderDetail, LocalDate orderDate,
-			LocalDate requiredDate, LocalDate shippedDate, String freight, String shipName, String shipAddress,
+			LocalDate requiredDate, LocalDate shippedDate, double freight, String shipName, String shipAddress,
 			String shipCity, String shipRegion, String shipPostalCode, String shipCountry) {
 		
 		this.customer = customer;
@@ -137,11 +137,11 @@ public class Orders {
 		this.shippedDate = shippedDate;
 	}
 
-	public String getFreight() {
+	public double getFreight() {
 		return freight;
 	}
 
-	public void setFreight(String freight) {
+	public void setFreight(double freight) {
 		this.freight = freight;
 	}
 
