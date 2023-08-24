@@ -1,4 +1,6 @@
 
+<%@page import="com.afdm.gestionpedidos.model.Category"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -28,12 +30,21 @@
 		  <div id="divFotoPrincipal">
           <img id="fotoPrincipalBusqueda" src="Imagenes/imgprincipal.png" class="img-fluid fotoPrincipal" alt="Imagen Principal">
         </div>
-        
+        <% List<Category> lista=(List<Category>)request.getAttribute("categoryList"); %>
         <fieldset id="busqueda">
-          <form  class="d-flex">
-            <input id="CajaTxt" class="form-control me-2" type="search" placeholder="Buscar por Categoria" aria-label="Search" name="busquedaCategory">
-            <button class="btn btn-ligth" style="background-color: #F279B2;"  type="button" onclick="buscarCategory();">Buscar</button>
+          <form  class="d-flex" method="get">
+        	  <select id="select" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" oninput="buscarCategory();">
+				 <% for (Category categoria:lista){ %>
+					 <option value="<%=categoria.getCategoryID()%>"><%=categoria.getCategoryName()%></option>
+				<%  } %>
+			</select>
+			
+            <!-- <input id="CajaTxt" class="form-control me-2" type="search" placeholder="Buscar por Categoria" aria-label="Search" name="busquedaCategory">
+              <button id="buscarButton" class="btn btn-ligth" style="background-color: #F279B2;"  type="button" onclick="buscarCategory();">Buscar</button>
+             -->
+            
           </form>
+         
           </fieldset>
           
           
