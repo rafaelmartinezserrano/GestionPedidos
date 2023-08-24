@@ -95,11 +95,11 @@ public class Product {
 		this.unitPrice = unitPrice;
 	}
 
-	public int getUnitsIntStock() {
+	public int getUnitsInStock() {
 		return unitsInStock;
 	}
 
-	public void setUnitsIntStock(int unitsIntStock) {
+	public void setUnitsInStock(int unitsIntStock) {
 		this.unitsInStock = unitsIntStock;
 	}
 

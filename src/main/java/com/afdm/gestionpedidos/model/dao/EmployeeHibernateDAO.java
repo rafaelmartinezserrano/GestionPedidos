@@ -32,7 +32,7 @@ public class EmployeeHibernateDAO implements EmployeeDAO{
 		Session sesion = DaoUtility.getSession();
 		Transaction transaccion = sesion.beginTransaction();
 		try {
-			TypedQuery<Employee> consulta = sesion.createQuery("from Employee where FirstName like :firstName and LastName 			like :lastName", Employee.class);
+			TypedQuery<Employee> consulta = sesion.createQuery("from Employee where firstName like :firstName and lastName like :lastName", Employee.class);
 			consulta.setParameter("firstName", "%"+firstName+"%");
 			consulta.setParameter("lastName", "%"+lastName+"%");
 			empleado = consulta.getSingleResult();

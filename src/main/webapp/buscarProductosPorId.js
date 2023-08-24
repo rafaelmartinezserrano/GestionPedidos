@@ -7,9 +7,9 @@ function buscarProductosPorId() {
 	let cajaTxt = document.getElementById("cajaTxt").value;
 	if (cajaTxt != "") {
 		axios.post(
-			"buscarProductosPorId",
+			"FindProductById",
 			null,
-			{ params: { busqueda: cajaTxt } }
+			{ params: { busquedaId: cajaTxt } }
 		).then(function(respuesta) {
 			imprimirProductos(respuesta.data);
 		}).catch(function(error) {
@@ -20,9 +20,10 @@ function buscarProductosPorId() {
 
 function imprimirProductos(producto) {
 	let divProductos = document.getElementById("divProductos");
+	console.log(producto)
 	divProductos.innerHTML =
-		`<div class="productId">${producto.id}</div>
-		<div class="productName">${producto.name}</div>
+		`<div class="productId">${producto.productID}</div>
+		<div class="productName">${producto.productName}</div>
 		<div class="quantityPerUnit">${producto.quantityPerUnit}</div>
 		<div class="unitsInStock">${producto.unitsInStock}</div>
 		<div class="unitPrice">${producto.unitPrice}</div>

@@ -23,19 +23,20 @@ public class FindProductByIdServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 		
 		String busqueda = request.getParameter("busquedaId");		
 		GestionPedidosDelegate fachada = new GestionPedidosFacade();
 		
-		System.out.println(busqueda);
-		int busquedaId = Integer.parseInt(busquedaId);
+	//System.out.println(busqueda);
+		int busquedaId = Integer.parseInt(busqueda);
 		
-		List<Product> lista = fachada.findProductByCategory(busquedaId);
+		Product producto = fachada.findProductById(busquedaId);
 		
+	//System.out.println(producto);
 		ObjectMapper mapeador = new ObjectMapper();
-		String json = mapeador.writeValueAsString(lista);
-		response.setContentType(json);
+		String json = mapeador.writeValueAsString(producto);
+	//System.out.println(json);
+		response.setContentType("application/json;charset=utf-8");
 		PrintWriter salida = response.getWriter();
 		salida.write(json);
 		salida.close();		

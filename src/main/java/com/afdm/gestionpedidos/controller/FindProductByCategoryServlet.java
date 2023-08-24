@@ -37,7 +37,7 @@ public class FindProductByCategoryServlet extends HttpServlet {
 		List<Product> lista = fachada.findProductByCategory(busquedaIdCategory);
 		ObjectMapper mapeador = new ObjectMapper();
 		String json = mapeador.writeValueAsString(lista);
-		response.setContentType(json);
+		response.setContentType("application/json;charset=utf-8");
 		PrintWriter salida = response.getWriter();
 		salida.write(json);
 		salida.close();
