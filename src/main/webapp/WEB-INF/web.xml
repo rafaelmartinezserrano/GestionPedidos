@@ -80,4 +80,14 @@
     <servlet-name>FindProductByIdServlet</servlet-name>
     <url-pattern>/FindProductById</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CerrarSesionServlet</display-name>
+    <servlet-name>CerrarSesionServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.CerrarSesionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CerrarSesionServlet</servlet-name>
+    <url-pattern>/CerrarSesion</url-pattern>
+  </servlet-mapping>
 </web-app>
