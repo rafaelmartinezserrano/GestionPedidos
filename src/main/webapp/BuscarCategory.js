@@ -3,7 +3,7 @@
  
  
   function buscarCategory () {
-	let TxtBusqueda = document.getElementById("CajaTxt").value;
+	let TxtBusqueda = document.getElementById("select").value;
 	// post é o metodo usado HTTP
 	if(TxtBusqueda != ""){
 		axios.post(
