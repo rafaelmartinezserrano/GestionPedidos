@@ -13,10 +13,13 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.FetchMode;
+import org.hibernate.annotations.FetchProfile;
 
 
 @Entity
 @Table(name="Orders")
+@FetchProfile(fetchOverrides = {@FetchProfile.FetchOverride(entity = OrderDetail.class, mode = FetchMode.JOIN, association = "orderDetail")}, name = "getOrdersD")
 public class Orders {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -79,6 +82,10 @@ public class Orders {
 		this.shipRegion = shipRegion;
 		this.shipPostalCode = shipPostalCode;
 		this.shipCountry = shipCountry;
+	}
+
+	public Orders (int orderID){
+		this.orderID = orderID;
 	}
 
 	public Customer getCustomer() {
