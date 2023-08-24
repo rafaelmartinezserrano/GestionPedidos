@@ -19,6 +19,7 @@
 		<nav class="navbar navbar-light" style="background-color: #F279B2;">
 			<div class="container-fluid">
 				<a class="navbar-brand">Gestion de Pedidos</a>
+				<a href="AltaNuevoEmpleado.jsp" class="navbar-brand">Alta Nuevo Empleado</a>
 			</div>
 		</nav>
 	</div>
