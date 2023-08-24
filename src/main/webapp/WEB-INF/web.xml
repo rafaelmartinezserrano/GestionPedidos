@@ -60,4 +60,14 @@
     <servlet-name>BusquedaCategoryServlet</servlet-name>
     <url-pattern>/BusquedaCategory</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewEmployeeServlet</display-name>
+    <servlet-name>NewEmployeeServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.NewEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewEmployeeServlet</servlet-name>
+    <url-pattern>/NewEmployee</url-pattern>
+  </servlet-mapping>
 </web-app>
