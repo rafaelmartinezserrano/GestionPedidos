@@ -63,4 +63,23 @@ public class EmployeeHibernateDAO implements EmployeeDAO{
 		return listEmployee;		
 	}
 	
+	@Override
+	public boolean registerEmployee(Employee empleado) {
+		boolean register = true;
+		
+		Session sesion = DaoUtility.getSession();
+		Transaction transaccion = sesion.beginTransaction();
+		try {
+			sesion.persist(empleado);
+			transaccion.commit();
+			sesion.close();
+		} catch(HibernateException e){
+			e.printStackTrace();
+			transaccion.rollback();
+			register= false;
+		}
+		
+		return register;
+	}
+	
 }

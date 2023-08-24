@@ -12,4 +12,10 @@ public interface EmployeeDAO {
 	
 	public List<Employee> findAllEmployee();
 	
+	
+	
+	public boolean registerEmployee(Employee employee);
+	
+	
+	
 }
