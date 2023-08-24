@@ -17,33 +17,39 @@
 </head>
 <body>
 	<div id="nav">
-		<nav class="navbar navbar-light" style="background-color: #F279B2;"> 
+		<nav class="navbar navbar-light" style="background-color: #F279B2;">
 			<div class="container-fluid">
 				<a class="navbar-brand">Gestion de Pedidos</a>
 			</div>
 		</nav>
 	</div>
-
-	<div id="divFotoPrincipal">
-		<img id="fotoPrincipal" src="imgbusqueda.png"
-			class="img-fluid fotoPrincipal" alt="">
-	</div>
-	<fieldset id="busqueda">
-	<form action="BuscarProductosPorId.jsp" class="d-flex">
-		<input id="cajaTxt" class="form-control me-2" type="search"
-			placeholder="Buscar Por Id" aria-label="Search" name="busquedaId">
-		<button class="btn btn-light" style="background-color: #F279B2" type="button"
-			onclick="imprimirProductos();">Buscar</button>
-		<div id="divProductos"></div>
-	</form>
-	</fieldset>
+	<main>
+		<div id="divFotoPrincipal">
+			<img id="fotoPrincipal" src="imgbusqueda.png"
+				class="img-fluid fotoPrincipal" alt="Imagen Principal">
+		</div>
+		<fieldset id="busqueda">
+			<form action="BuscarProductosPorId.jsp" class="d-flex">
+				<input id="cajaTxt" class="form-control me-2" type="search"
+					placeholder="Buscar Por Id" aria-label="Search" name="busquedaId">
+				<button class="btn btn-light" style="background-color: #F279B2"
+					type="button" onclick="imprimirProductos();">Buscar</button>
+				<div id="divProductos"></div>
+			</form>
+		</fieldset>
+	</main>
 	<footer>
-       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="inicioSesion.jsp" class="nav-link px-2 text-muted">Inicio</a></li>
-            <li class="nav-item"><a href="BusquedaCategory.jsp" class="nav-link px-2 text-muted">Buscar por categoria</a></li>
-            <li class="nav-item"><a href="CerrarSession" class="nav-link px-2 text-muted">Salir</a></li>
-          </ul>
-		<p class="text-center text-muted"> &copy; 2023 AFDM</p>
+		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+			<li class="nav-item"><a href="inicioSesion.jsp"
+				class="nav-link px-2 text-muted">Inicio</a></li>
+			<li class="nav-item"><a href="principal.jsp"
+				class="nav-link px-2 text-muted">Pagina Principal</a></li>
+			<li class="nav-item"><a href="BusquedaCategory.jsp"
+				class="nav-link px-2 text-muted">Buscar por categoria</a></li>
+			<li class="nav-item"><a href="CerrarSession"
+				class="nav-link px-2 text-muted">Salir</a></li>
+		</ul>
+		<p class="text-center text-muted">&copy; 2023 AFDM</p>
 	</footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

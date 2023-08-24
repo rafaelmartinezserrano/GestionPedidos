@@ -1,21 +1,10 @@
 @charset "ISO-8859-1";
 
-* {
-	justify-content: center;
+body {
+	text-align: center;
 }
 
-#busqueda {
-	margin-top: 20px;
-	margin-bottom: 10px;
-	display: flex;
-	justify-content: center
-}
-
-.button {
-	margin-top: 20px;
-}
-
-#fotoPrincipal {
+#foto {
 	width: 15%;
 	height: auto;
 	display: block;
@@ -24,7 +13,7 @@
 	padding-bottom: 30px;
 }
 
-#divFotoPrincipal {
+#divFoto {
 	margin-bottom: 15px;
 }
 
@@ -33,10 +22,19 @@
 	padding-top: 30px;
 }
 
-#divProductos {
-	padding-top: 30px;
-}
-
 main {
 	min-height: 700px;
+	text-align: center;
+}
+fieldset {
+		color: #F279B2;
+		border: 3px #F279B2 solid;
+	}
+li {
+	list-style: none;
+}
+
+legend {
+	color: black;
+	padding: 20px;
 }
