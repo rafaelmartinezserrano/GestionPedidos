@@ -12,4 +12,6 @@ public interface CustomerDAO {
 	
 	public List<Customer> findAllCustomer();
 	
+	public boolean  registerCustomer(Customer customer);
+	
 }

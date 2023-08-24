@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
@@ -64,4 +65,23 @@ public class CustomerHibernateDAO implements CustomerDAO{
 		session.close();
 		return customersList;
 	}
+	
+	@Override
+	public boolean registerCustomer(Customer customer) {
+		boolean register = true;
+			
+		Session sesion = DaoUtility.getSession();
+		Transaction transaction = sesion.beginTransaction();
+		try {
+		sesion.persist(customer);
+		transaction.commit();
+		sesion.close();
+		} catch(HibernateException e) {
+			e.printStackTrace();
+			transaction.rollback();
+			register = false;
+		}
+		return register;	
+	}
+
 }
