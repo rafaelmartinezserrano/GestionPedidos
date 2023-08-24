@@ -34,4 +34,14 @@
     <servlet-name>FindProductByCategory</servlet-name>
     <url-pattern>/FindProductByCategory</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddToCarritoServlet</display-name>
+    <servlet-name>AddToCarritoServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.AddToCarritoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddToCarritoServlet</servlet-name>
+    <url-pattern>/AddToCarrito</url-pattern>
+  </servlet-mapping>
 </web-app>
