@@ -30,7 +30,7 @@
 	<div id="nav">
 		<nav>
 			<ul>
-				<li><a href="BuscarCategory.jsp">Buscar Productos por
+				<li><a href="BusquedaCategory.jsp">Buscar Productos por
 						Categoria</a></li>
 				<li><a href="buscarProductosPorId.jsp">Buscar Productos por
 						Id</a></li>
