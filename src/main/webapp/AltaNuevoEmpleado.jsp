@@ -24,6 +24,7 @@
          
         </div>
       </nav>
+      <%String mensaje = (String)request.getAttribute("error"); %>
       </div>
    	
 		  <div id="divFotoPrincipal">
@@ -51,10 +52,10 @@
 	            <label for="selectTitleOfCourtesy">Tratamiento</label>
 	            <select id="selectTitleOfCourtesy" name="Title">
 	            	<option value=""></option>
-	            	<option value="Mrs.">Ella</option>
-	            	<option value="Mr.">El</option>
-	            	<option value="Dr.">Ello</option>
-	            	<option value="Ms.">No me defino</option>
+	            	<option value="Mrs.">Mrs.</option>
+	            	<option value="Mr.">Mr.</option>
+	            	<option value="Dr.">Dr.</option>
+	            	<option value="Ms.">Ms.</option>
 	            </select>  
             </div>
             
@@ -120,6 +121,9 @@
             <button class="btn btn-ligth" style="background-color: #F279B2;"  type="button" onclick="buscarCategory();">Buscar</button>
             -->
          	</div>
+         	<% if (mensaje != null) {  %>
+				<div id="mensaje"><%=mensaje%></div>
+				<% } %>
           </form>
           
          </div> 

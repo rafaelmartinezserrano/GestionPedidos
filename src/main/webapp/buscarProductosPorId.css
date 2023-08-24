@@ -39,7 +39,38 @@
 	margin: auto;
 	width: 25%;
 }
+<<<<<<< Updated upstream
 
 main {
 	min-height: 700px;
+=======
+.encabezado{
+	color: white;
+}
+.formulario{
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+	margin: 5px auto;
+	padding: 10px;
+	justify-content: space-evenly;
+}
+.divForm {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+#Form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#botonEnviar{
+	width: 30%;
+	margin: auto;
+	border: none;
+	border-radius: 10px 10px;
+	background-color: Darkslateblue;
+	color: white;
+>>>>>>> Stashed changes
 }

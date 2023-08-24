@@ -13,14 +13,14 @@
 </head>
   <body>
     <div id="nav">
-      <nav class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-litgh" style="background-color: #F279B2;">
         <div class="container-fluid"> 
-          <a class="navbar-brand" href="#">Gestion Pedidos</a>
+          <a style="color: black;"class="navbar-brand" href="#">GESTION PEDIDOS</a>
         </div>
       </nav>
     </div>
     <div id="imagen">
-      <img src="imagenes/imgprincipal.png" class="img-fluid fotoCapa" alt="Foto Búsqueda" id="fotoBusqueda">
+      <img src="Imagenes/imgprin.png" class="img-fluid fotoCapa" alt="Foto Pincipal" id="fotoPrincipal">
     </div> 
   
 
@@ -63,7 +63,7 @@
          </div>
          
         
-          <input type="submit" value="Iniciar Sesión"/>
+          <input class ="btn btn-light button" style="background-color: #F279B2" type="submit" value="Iniciar Sesión"/>
          
          <% String error = (String)request.getAttribute("error"); %>
           <div>

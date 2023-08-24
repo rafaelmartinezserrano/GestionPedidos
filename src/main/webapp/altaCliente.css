@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+.encabezado{
+	color: white;
+}
+.formulario{
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+	margin: 5px auto;
+	padding: 10px;
+	justify-content: space-evenly;
+}
+.divForm {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+#Form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#botonEnviar{
+	width: 30%;
+	margin: auto;
+	border: none;
+	border-radius: 10px 10px;
+	background-color: Darkslateblue;
+	color: white;
+}

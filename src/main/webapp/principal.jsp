@@ -19,6 +19,7 @@
 		<nav class="navbar navbar-light" style="background-color: #F279B2;">
 			<div class="container-fluid">
 				<a class="navbar-brand">Gestion de Pedidos</a>
+				
 			</div>
 		</nav>
 	</div>
@@ -35,6 +36,8 @@
 						Categoria</a></li>
 				<li><a href="buscarProductosPorId.jsp">Buscar Productos por
 						Id</a></li>
+				<li><a href="AltaNuevoEmpleado.jsp">Alta Nuevo Empleado</a></li>
+					
 			</ul>
 		</nav>
 	</div>
