@@ -44,4 +44,10 @@
     <servlet-name>AddToCarritoServlet</servlet-name>
     <url-pattern>/AddToCarrito</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewCustomerServlet</display-name>
+    <servlet-name>/NewCustomer</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.NewCustomerServlet</servlet-class>
+  </servlet>
 </web-app>
