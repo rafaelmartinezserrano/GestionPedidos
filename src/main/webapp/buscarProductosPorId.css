@@ -35,6 +35,9 @@
 
 #divProductos {
 	padding-top: 30px;
+	justify-content: center;
+	margin: auto;
+	width: 25%;
 }
 
 main {

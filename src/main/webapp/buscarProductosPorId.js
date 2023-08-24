@@ -22,10 +22,13 @@ function imprimirProductos(producto) {
 	let divProductos = document.getElementById("divProductos");
 	console.log(producto)
 	divProductos.innerHTML =
-		`<div class="productId">${producto.productID}</div>
-		<div class="productName">${producto.productName}</div>
-		<div class="quantityPerUnit">${producto.quantityPerUnit}</div>
-		<div class="unitsInStock">${producto.unitsInStock}</div>
-		<div class="unitPrice">${producto.unitPrice}</div>
-		<div> <input type="button" value="Añadir" onclick=""/> </div>`;
+		`<div>
+		<ul>
+		<li><span>Id del producto: </span>${producto.productID}</li>
+		<li><span>Nombre del producto: </span>${producto.productName}</li>
+		<li><span>Productos por lote: </span>${producto.quantityPerUnit}</li>
+		<li><span>Unidades en stock: :</span>${producto.unitsInStock}</li>
+		<li><span>Precio de la unidad:</span>${producto.unitPrice}</li>
+		</ul>
+		<div><input type="button" value="Comprar" onclick=""/> </div>`;
 }

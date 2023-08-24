@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link type="image/x-icon" rel="icon" href="imagen/favicon.png" />
 <title>Buscar Por Id</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -34,9 +33,10 @@
 					placeholder="Buscar Por Id" aria-label="Search" name="busquedaId">
 				<button class="btn btn-light" style="background-color: #F279B2"
 					type="button" onclick="imprimirProductos();">Buscar</button>
-				<div id="divProductos"></div>
+				
 			</form>
 		</fieldset>
+		<div id="divProductos"></div>
 	</main>
 	<footer>
 		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
