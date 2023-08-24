@@ -22,10 +22,11 @@
 			</div>
 		</nav>
 	</div>
-	<fieldset >
-	<legend>Menú</legend>
 	<div id="divFoto">
 		<img id="foto" src="imgbusqueda.png" alt="Imagen Principal">
+	</div>
+	<div id="menu">
+		<h3>Menú</h3>
 	</div>
 	<div id="nav">
 		<nav>
@@ -37,7 +38,6 @@
 			</ul>
 		</nav>
 	</div>
-	</fieldset>
 	<footer>
 		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
 			<li class="nav-item"><a href="inicioSesion.jsp"

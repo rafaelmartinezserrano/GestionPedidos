@@ -11,5 +11,6 @@ public interface ProductDAO {
 	public List<Product> findProductByName(String productName);
 	
 	public List<Product> findProductByCategory(int categoryId);
-	
+
+	public boolean updateProduct(Product producto);
 }

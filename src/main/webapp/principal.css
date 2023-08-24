@@ -9,8 +9,8 @@ body {
 	height: auto;
 	display: block;
 	margin: 0 auto;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 50px;
+	padding-bottom: 40px;
 }
 
 #divFoto {
@@ -26,15 +26,11 @@ main {
 	min-height: 700px;
 	text-align: center;
 }
-fieldset {
-		color: #F279B2;
-		border: 3px #F279B2 solid;
-	}
+
 li {
 	list-style: none;
 }
 
-legend {
-	color: black;
-	padding: 20px;
+footer {
+	padding: 10%;
 }

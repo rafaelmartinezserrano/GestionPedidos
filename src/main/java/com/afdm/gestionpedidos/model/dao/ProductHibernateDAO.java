@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import com.afdm.gestionpedidos.model.Category;
+import com.afdm.gestionpedidos.model.Orders;
 import com.afdm.gestionpedidos.model.Product;
 
 import jakarta.persistence.TypedQuery;
@@ -82,6 +83,24 @@ public class ProductHibernateDAO implements ProductDAO {
 		}
 		
 		return products;
+	}
+
+	@Override
+	public boolean updateProduct(Product producto) {
+		
+		boolean insertado = true;
+		Session sesion = DaoUtility.getSession();
+		Transaction transaction = sesion.beginTransaction();
+		try {
+			sesion.merge(producto);
+			transaction.commit();
+			sesion.close();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			transaction.rollback();
+			insertado = false;
+		}
+		return insertado;
 	}
 
 }
