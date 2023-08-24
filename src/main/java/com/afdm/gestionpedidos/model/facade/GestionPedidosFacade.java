@@ -2,11 +2,13 @@ package com.afdm.gestionpedidos.model.facade;
 
 import java.util.List;
 
+import com.afdm.gestionpedidos.model.Category;
 import com.afdm.gestionpedidos.model.Customer;
 import com.afdm.gestionpedidos.model.Employee;
 import com.afdm.gestionpedidos.model.Orders;
 import com.afdm.gestionpedidos.model.Product;
 import com.afdm.gestionpedidos.model.dao.CategoryDAO;
+import com.afdm.gestionpedidos.model.dao.CategoryHibernateDAO;
 import com.afdm.gestionpedidos.model.dao.CustomerDAO;
 import com.afdm.gestionpedidos.model.dao.CustomerHibernateDAO;
 import com.afdm.gestionpedidos.model.dao.EmployeeDAO;
@@ -50,6 +52,32 @@ public class GestionPedidosFacade implements GestionPedidosDelegate {
 	public Product findProductById(int idProduct) {
 		ProductDAO dao = new ProductHibernateDAO();
 		return dao.findProductById(idProduct);	
+	}
+	
+	@Override
+	public List<Category> findAllCategory() {
+		CategoryDAO dao = new CategoryHibernateDAO();
+		return dao.findAllCategory();
+		
+	}
+	
+	
+	@Override 
+	public boolean signUpCustomer(Customer customer) {
+		CustomerDAO dao = new CustomerHibernateDAO();
+		return dao.registerCustomer(customer);
+	}
+	
+	@Override
+	public boolean registerEmployee(Employee employee) {
+		EmployeeDAO dao = new EmployeeHibernateDAO();
+		return dao.registerEmployee(employee);
+	}
+	
+	@Override
+	public boolean updateProduct(Product producto) {
+		ProductDAO dao = new ProductHibernateDAO();
+		return dao.updateProduct(producto);
 	}
 
 
