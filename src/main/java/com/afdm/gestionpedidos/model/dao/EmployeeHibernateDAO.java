@@ -13,8 +13,6 @@ public class EmployeeHibernateDAO implements EmployeeDAO{
 	@Override
 	public Employee findEmployeeById(int employeeId) {
 		Employee empleado = null;
-		Configuration conf = new Configuration();
-		conf.configure();
 		Session sesion = DaoUtility.getSession();
 		Transaction transaccion = sesion.beginTransaction();
 		try {
@@ -30,15 +28,13 @@ public class EmployeeHibernateDAO implements EmployeeDAO{
 
 	@Override
 	public Employee findEmployeeByName(String firstName, String lastName) {
-		Employee empleado = new Employee();;
-		Configuration conf = new Configuration();
-		conf.configure();
+		Employee empleado = new Employee();
 		Session sesion = DaoUtility.getSession();
 		Transaction transaccion = sesion.beginTransaction();
 		try {
 			TypedQuery<Employee> consulta = sesion.createQuery("from Employee where FirstName like :firstName and LastName 			like :lastName", Employee.class);
-			consulta.setParameter("nombreEmpleado", "%"+firstName+"%");
-			consulta.setParameter("apellidoEmpleado", "%"+lastName+"%");
+			consulta.setParameter("firstName", "%"+firstName+"%");
+			consulta.setParameter("lastName", "%"+lastName+"%");
 			empleado = consulta.getSingleResult();
 			transaccion.commit();
 		} catch (HibernateException e) {
@@ -53,8 +49,6 @@ public class EmployeeHibernateDAO implements EmployeeDAO{
 	@Override
 	public List<Employee> findAllEmployee() {
 		List<Employee> listEmployee = null;
-		Configuration conf = new Configuration();
-		conf.configure();
 		Session sesion = DaoUtility.getSession();
 		Transaction transaccion = sesion.beginTransaction();
 		try {
