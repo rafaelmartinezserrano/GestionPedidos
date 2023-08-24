@@ -9,8 +9,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.afdm.gestionpedidos.model.Carrito;
-import com.afdm.gestionpedidos.model.CarritoElement;
+import com.afdm.gestionpedidos.model.carrito.Carrito;
+import com.afdm.gestionpedidos.model.carrito.CarritoElement;
+import com.afdm.gestionpedidos.model.Product;
 
 import com.afdm.gestionpedidos.model.facade.GestionPedidosDelegate;
 import com.afdm.gestionpedidos.model.facade.GestionPedidosFacade;
@@ -33,7 +34,7 @@ public class AddToCarritoServlet extends HttpServlet {
 		GestionPedidosDelegate facade = new GestionPedidosFacade();
 		try {
 			Product product = facade.findProductById(Integer.parseInt(productId));
-			CarritoElement carritoElement = new CarritoElement(product, quantity);
+			CarritoElement carritoElement = new CarritoElement(product, Integer.parseInt(quantity));
 			
 			carrito.addToCarrito(carritoElement);
 			
