@@ -70,4 +70,14 @@
     <servlet-name>NewEmployeeServlet</servlet-name>
     <url-pattern>/NewEmployee</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindProductByIdServlet</display-name>
+    <servlet-name>FindProductByIdServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.FindProductByIdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindProductByIdServlet</servlet-name>
+    <url-pattern>/FindProductById</url-pattern>
+  </servlet-mapping>
 </web-app>
