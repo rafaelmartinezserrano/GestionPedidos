@@ -24,7 +24,7 @@
          
         </div>
       </nav>
-      <%String mensaje = (String)request.getAttribute("mensaje"); %>
+      <%String mensaje = (String)request.getAttribute("error"); %>
       </div>
    	
 		  <div id="divFotoPrincipal">
