@@ -87,73 +87,80 @@ public class OrderHibernateDAO implements OrderDAO{
     @Override
     public Orders editOrder (Orders order){
         Orders orderUpdate = null;
+        Orders orderUpdateFinal = null;
         Session session = DaoUtility.getSession();
         session.enableFetchProfile("getOrdersD");
         Transaction transaction = session.beginTransaction();
         try {
             orderUpdate = session.get(Orders.class, order.getOrderID());
-            if (order.equals(orderUpdate)){
 
-            }else{
-                if (order.getCustomer() != null){
-                    orderUpdate.setCustomer(order.getCustomer());
-                }
+            //quitar el if principal y los if internos convertirlos en un metodo con nombre: updateAtributes
 
-                if (order.getEmployee() != null){
-                    orderUpdate.setEmployee(order.getEmployee());
-                }
+            orderUpdateFinal = new OrderHibernateDAO().updateAtributes(order, orderUpdate);
 
-                if (order.getOrderDetail() != null){
-                    orderUpdate.setOrderDetail(order.getOrderDetail());
-                }
-
-                if (order.getOrderDate() != null){
-                    orderUpdate.setOrderDate(order.getOrderDate());
-                }
-
-                if (order.getRequiredDate() != null){
-                    orderUpdate.setRequiredDate(order.getRequiredDate());
-                }
-
-                if (order.getShippedDate() != null){
-                    orderUpdate.setShippedDate(order.getShippedDate());
-                }
-
-                if (order.getFreight() != null){
-                    orderUpdate.setFreight(order.getFreight());
-                }
-
-                if (order.getShipName() != null){
-                    orderUpdate.setShipName(order.getShipName());
-                }
-
-                if (order.getShipAddress() != null){
-                    orderUpdate.setShipAddress(order.getShipAddress());
-                }
-
-                if (order.getShipCity() != null){
-                    orderUpdate.setShipCity(order.getShipCity());
-                }
-
-                if (order.getShipRegion() != null){
-                    orderUpdate.setShipRegion(order.getShipRegion());
-                }
-
-                if (order.getShipPostalCode() != null){
-                    orderUpdate.setShipPostalCode(order.getShipPostalCode());
-                }
-
-                if (order.getShipCountry() != null){
-                    orderUpdate.setShipCity(order.getShipCountry());
-                }
-            }
-            session.update(orderUpdate);
+            session.merge(orderUpdate);
             transaction.commit();
         }catch (HibernateException e){
             e.printStackTrace();
             transaction.rollback();
         }
         session.close();
+        return orderUpdateFinal;
+    }
+
+    public Orders updateAtributes(Orders order, Orders orderUpdate){
+
+        if (order.getCustomer() != null){
+            orderUpdate.setCustomer(order.getCustomer());
+        }
+        if (order.getEmployee() != null){
+            orderUpdate.setEmployee(order.getEmployee());
+        }
+
+        if (order.getOrderDetail() != null){
+            orderUpdate.setOrderDetail(order.getOrderDetail());
+        }
+
+        if (order.getOrderDate() != null){
+            orderUpdate.setOrderDate(order.getOrderDate());
+        }
+
+        if (order.getRequiredDate() != null){
+            orderUpdate.setRequiredDate(order.getRequiredDate());
+        }
+
+        if (order.getShippedDate() != null){
+            orderUpdate.setShippedDate(order.getShippedDate());
+        }
+
+        if ((Double)order.getFreight() != null){
+            orderUpdate.setFreight(order.getFreight());
+        }
+
+        if (order.getShipName() != null){
+            orderUpdate.setShipName(order.getShipName());
+        }
+
+        if (order.getShipAddress() != null){
+            orderUpdate.setShipAddress(order.getShipAddress());
+        }
+
+        if (order.getShipCity() != null){
+            orderUpdate.setShipCity(order.getShipCity());
+        }
+
+        if (order.getShipRegion() != null){
+            orderUpdate.setShipRegion(order.getShipRegion());
+        }
+
+        if (order.getShipPostalCode() != null){
+            orderUpdate.setShipPostalCode(order.getShipPostalCode());
+        }
+
+        if (order.getShipCountry() != null){
+            orderUpdate.setShipCity(order.getShipCountry());
+        }
+
         return orderUpdate;
     }
 }
