@@ -30,7 +30,7 @@ function imprimirCategory (lista) {
 			<li> Producto: <span>${producto.productName}</span></li>
 			<li> Precio: <span>${producto.unitPrice}</span></li>
 			<input type="button" value="Sumar al Carrito" class="btn btn-light" style="background-color: #F279B2" onclick=""/>
-			<li><a href="LoadProduct"> Modificar datos producto</a></li>
+			<li><a href="LoadProduct?busquedaId=${producto.productID}"> Modificar datos producto</a></li>
          </ul>`;
          
 	}
