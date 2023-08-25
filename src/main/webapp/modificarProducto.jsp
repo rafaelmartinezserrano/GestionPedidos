@@ -32,7 +32,7 @@
         </div>
 
         <div id="container">
-          <form class="formulario"  action="modificarProducto" method="post">
+          <form class="formulario"  action="/UpdateProduc" method="post">
             <div>
                 <label>Categoria: <%= product.getCategory() %></label>
                 <label>Nombre del producto: <%= product.getProductName() %></label>
