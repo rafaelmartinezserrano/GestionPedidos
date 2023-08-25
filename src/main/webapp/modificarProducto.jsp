@@ -1,4 +1,5 @@
 
+<%@page import="com.afdm.gestionpedidos.model.Product"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,7 +25,7 @@
 
         </div>
       </nav>
-      <%Product product = (Product)request.getAttribute("product"); %>
+      <% Product product = (Product)request.getAttribute("product"); %>
       </div>
 		  <div id="divFotoPrincipal">
           <img id="fotoPrincipalBusqueda" src="Imagenes/modificarProducto.png" class="img-fluid fotoPrincipal" alt="Modificar producto">
@@ -33,11 +34,11 @@
         <div id="container">
           <form class="formulario"  action="modificarProducto" method="post">
             <div>
-                <label>Categoria: <%= product.getCategory %></label>
-                <label>Nombre del producto: <%= product.getProductName %></label>
-                <label>Precio por unidad: <%= product.getQuantityPerUnit %></label>
-                <label>Unidades ordenadas: <%= product.getUnitsOnOrder %></label>
-                <label>Nivel de pedido: <%= product.getReorderLevel %></label>
+                <label>Categoria: <%= product.getCategory() %></label>
+                <label>Nombre del producto: <%= product.getProductName() %></label>
+                <label>Precio por unidad: <%= product.getQuantityPerUnit() %></label>
+                <label>Unidades ordenadas: <%= product.getUnitsOnOrder() %></label>
+                <label>Nivel de pedido: <%= product.getReorderLevel() %></label>
             </div>
 
           	<div>
