@@ -32,9 +32,10 @@ public class FindProductByIdServlet extends HttpServlet {
 		
 		Product producto = fachada.findProductById(busquedaId);
 		
-	//System.out.println(producto);
-		ObjectMapper mapeador = new ObjectMapper();
-		String json = mapeador.writeValueAsString(producto);
+	
+		ObjectMapper mapper = new ObjectMapper();
+		String json = mapper.writeValueAsString(producto); // Tranforma el objeto de java en un string de json
+		
 	//System.out.println(json);
 		response.setContentType("application/json;charset=utf-8");
 		PrintWriter salida = response.getWriter();
