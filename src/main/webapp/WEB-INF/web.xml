@@ -47,9 +47,13 @@
   <servlet>
     <description></description>
     <display-name>NewCustomerServlet</display-name>
-    <servlet-name>/NewCustomer</servlet-name>
+    <servlet-name>NewCustomerServlet</servlet-name>
     <servlet-class>com.afdm.gestionpedidos.controller.NewCustomerServlet</servlet-class>
   </servlet>
+  <servlet-mapping>
+    <servlet-name>NewCustomerServlet</servlet-name>
+    <url-pattern>/NewCustomer</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>BusquedaCategoryServlet</display-name>
