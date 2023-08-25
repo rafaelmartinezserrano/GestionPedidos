@@ -45,7 +45,7 @@
 		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
 			<li class="nav-item"><a href="inicioSesion.jsp"
 				class="nav-link px-2 text-muted">Inicio</a></li>
-			<li class="nav-item"><a href="CerrarSesion"
+			<li class="nav-item"><a href="CerrarSession"
 				class="nav-link px-2 text-muted">Salir</a></li>
 		</ul>
 		<p class="text-center text-muted">&copy; 2023 AFDM</p>

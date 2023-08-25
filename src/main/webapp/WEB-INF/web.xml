@@ -88,6 +88,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>CerrarSesionServlet</servlet-name>
-    <url-pattern>/CerrarSesion</url-pattern>
+    <url-pattern>/CerrarSession</url-pattern>
   </servlet-mapping>
 </web-app>
