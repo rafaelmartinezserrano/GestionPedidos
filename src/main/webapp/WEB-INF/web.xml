@@ -24,7 +24,7 @@
     <servlet-name>IniciarSesion</servlet-name>
     <url-pattern>/IniciarSesion</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>FindProductByCategory</display-name>
     <servlet-name>FindProductByCategory</servlet-name>
@@ -93,5 +93,15 @@
   <servlet-mapping>
     <servlet-name>CerrarSesionServlet</servlet-name>
     <url-pattern>/CerrarSession</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchClientsServlet</display-name>
+    <servlet-name>SearchClientsServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.SearchClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchClientsServlet</servlet-name>
+    <url-pattern>/SearchClients</url-pattern>
   </servlet-mapping>
 </web-app>
