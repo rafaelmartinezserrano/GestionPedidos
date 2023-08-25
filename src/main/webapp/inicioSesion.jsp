@@ -20,7 +20,7 @@
       </nav>
     </div>
     <div id="imagen">
-      <img src="Imagenes/imgprin.png" class="img-fluid fotoCapa" alt="Foto Pincipal" id="fotoPrincipal">
+      <img src="Imagenes/imgprin.png" class="img-fluid fotoCapa" alt="Foto Principal" id="fotoPrincipal">
     </div> 
   
 
