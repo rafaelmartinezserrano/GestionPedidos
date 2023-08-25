@@ -124,4 +124,14 @@
     <servlet-name>CarritoCompraServlet</servlet-name>
     <url-pattern>/CarritoCompra</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateProductServlet</display-name>
+    <servlet-name>UpdateProductServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.UpdateProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateProductServlet</servlet-name>
+    <url-pattern>/UpdateProduct</url-pattern>
+  </servlet-mapping>
 </web-app>
