@@ -28,17 +28,17 @@
 				<% if(carrito != null && !carrito.getListOD().isEmpty()) { %>
 					<% for(CarritoElement i : carrito.getListOD()) { %>
 						<ul>
-							<li id="${i.getProduct()}">
+							<li>
 								<div class="btn_box">
-									<input type="button" value="-" id="btnDeleteOne" onclick="deleteOne();">
-									<input type="number" readonly="readonly" value="<%=i.getQuantity() %>" id="quantity">
-									<input type="button" value="+" id="btnAddOne" onclick="addOne();">
+									<input type="button" value="-" id="btnDeleteOne" onclick="changeQuantity(-1, <%=i.getProduct().getProductID()%>);">
+									<input type="number" readonly="readonly" value="<%=i.getQuantity() %>" id="quantity<%=i.getProduct().getProductID()%>">
+									<input type="button" value="+" id="btnAddOne" onclick="changeQuantity(1, <%=i.getProduct().getProductID()%>);">
 								<div class="prodDetail">
 									<%=i.getProduct() %>
 								</div>
 								</div>
 								<div class="btnDelete_box">
-									<img alt="delete" src="Imagenes/itemCarritoDelete.png" id="itemDelete" onclick="deleteAll(<%=i.getProduct()%>);">
+									<img alt="delete" src="Imagenes/itemCarritoDelete.png" id="itemDelete" onclick="deleteProduct(<%=i.getProduct().getProductID()%>);">
 								</div>
 							</li>
 						</ul>

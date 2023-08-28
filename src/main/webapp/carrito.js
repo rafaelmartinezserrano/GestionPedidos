@@ -2,35 +2,27 @@
  * 
  */
  
- function deleteOne(){
-	 let quantity = 1;
-	 axios.post(
-		 "DeleteOneFromCarrito",
-		 null,
-		 {params: {cant: quantity}}
-	 ).then(function(respuesta){
-		 console.log(respuesta.data);
-	 }).catch(function(error){
-		 console.error(error);
-	 });
+ function changeQuantity(valor, idProduct){
+	 let textQuantity = document.getElementById("quantity"+idProduct);
+	 let quantity = parseInt(textQuantity.value) + valor;
+	 if (quantity > 0) {
+		 textQuantity.value = quantity;
+		 axios.post(
+			 "ChangeQuantityFromCarrito",
+			 null,
+			 {params: {cant: quantity, idProduct: idProduct}}
+		 ).then(function(respuesta){
+			//No es necesario repintar el carrito, porque ya se modificó el valor de la caja de texto
+			 console.log(respuesta.data);
+		 }).catch(function(error){
+			 console.error(error);
+		 });
+	 }
  }
  
- function addOne(){
-	 let quantity = 1;
+ function deleteProduct(product){
 	 axios.post(
-		 "AddToCarrito",
-		 null,
-		 {params: {cant: quantity}}
-	 ).then(function(respuesta){
-		 console.log(respuesta.data);
-	 }).catch(function(error){
-		 console.error(error);
-	 });
- }
- 
- function deleteAll(product){
-	 axios.post(
-		 "DeleteFromCarrito",
+		 "DeleteProductFromCarrito",
 		 null,
 		 {params: {prod: product}}
 	 ).then(function(respuesta){
@@ -40,27 +32,27 @@
 	 })
  }
  
- function printCart(carritoElementList){
+ function printCart(carrito){
 	 let prodInCartList = document.getElementById("prodInCartList");
 	 let list = ""
-	for(let i of carritoElementList){
+	for(let i of carrito.listOD){
 		list += `
 			<ul>
-				<li id="${i.getProduct()}">
+				<li>
 					<div class="btn_box">
-						<input type="button" value="-" id="btnDeleteOne">
-						<input type="number" readonly="readonly" value="<%=${i.getQuantity()} %>" id="quantity">
-						<input type="button" value="+" id="btnAddOne">
+						<input type="button" value="-" id="btnDeleteOne" onclick="changeQuantity(-1, ${i.product.productID});">
+						<input type="number" readonly="readonly" value="<%=${i.quantity} %>" id="quantity">
+						<input type="button" value="+" id="btnAddOne" onclick="changeQuantity(1, ${i.product.productID});">
 					<div class="prodDetail">
-						<%=${i.getProduct()} %>
+						<%=${i.product} %>
 					</div>
 					</div>
 					<div class="btnDelete_box" id="btnDeleteAll">
-						<img alt="delete" src="Imagenes/itemCarritoDelete.png" id="itemDelete" onclick="deleteAll(<%=${i.getProduct()}%>);">
+						<img alt="delete" src="Imagenes/itemCarritoDelete.png" id="itemDelete" onclick="deleteProduct(${i.product.productID});">
 					</div>
 				</li>
 			</ul>
-		`
+		`;
 	}
 	prodInCartList.innerHTML = list;
  }
