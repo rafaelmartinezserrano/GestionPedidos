@@ -29,10 +29,33 @@ function imprimirCategory (lista) {
 		`<ul class="listaCategoryDiv" class="border border-dark-subtle">
 			<li> Producto: <span>${producto.productName}</span></li>
 			<li> Precio: <span>${producto.unitPrice}</span></li>
-			<input type="button" value="Sumar al Carrito" class="btn btn-light" style="background-color: #F279B2" onclick=""/>
+			<input type="button" value="Añadir al Carrito" class="btn btn-light" style="background-color: #F279B2" onclick="addToCarrito(${producto.productID})"/>
 			<li><a href="LoadProduct?busquedaId=${producto.productID}"> Modificar datos producto</a></li>
          </ul>`;
          
 	}
 	resultadoBusqueda.innerHTML = textoCategory;
+}
+
+function addToCarrito(productID){
+	
+	axios.post(
+		"AddToCarrito",
+		null,
+		{params:{productId:productID,
+		quantity:1}}
+	).then(
+		function(respuesta){
+			if(respuesta.status==200){
+				console.log("Producto añadido al carrito")
+			} else {
+				console.log("Error HTTP")
+			}
+		}
+	).catch(
+		function(error){
+			console.error(error);
+		}
+	)
+	
 }
