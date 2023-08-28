@@ -24,7 +24,7 @@
 		</nav>
 	</div>
 	<div id="divFoto">
-		<img id="foto" src="imgbusqueda.png" alt="Imagen Principal">
+		<img id="foto" src="Imagenes/imgbusqueda.png" alt="Imagen Principal">
 	</div>
 	<div id="menu">
 		<h3>Menú</h3>
