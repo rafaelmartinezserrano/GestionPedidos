@@ -26,6 +26,6 @@ public interface GestionPedidosDelegate {
 
 	boolean updateProduct(Product producto);
 	
-	
+	public List<Customer> findAllCustomer();
 	
 }

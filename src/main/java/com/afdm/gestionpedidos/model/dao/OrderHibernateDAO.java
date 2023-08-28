@@ -1,15 +1,11 @@
 package com.afdm.gestionpedidos.model.dao;
 
-import com.afdm.gestionpedidos.model.Customer;
-import com.afdm.gestionpedidos.model.Employee;
-import com.afdm.gestionpedidos.model.OrderDetail;
 import com.afdm.gestionpedidos.model.Orders;
 import jakarta.persistence.TypedQuery;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -96,7 +92,7 @@ public class OrderHibernateDAO implements OrderDAO{
 
             //quitar el if principal y los if internos convertirlos en un metodo con nombre: updateAtributes
 
-            orderUpdateFinal = new OrderHibernateDAO().updateAtributes(order, orderUpdate);
+            orderUpdateFinal = this.updateAtributes(order, orderUpdate);
 
             session.merge(orderUpdate);
             transaction.commit();
@@ -108,11 +104,12 @@ public class OrderHibernateDAO implements OrderDAO{
         return orderUpdateFinal;
     }
 
-    public Orders updateAtributes(Orders order, Orders orderUpdate){
+    private Orders updateAtributes(Orders order, Orders orderUpdate){
 
         if (order.getCustomer() != null){
             orderUpdate.setCustomer(order.getCustomer());
         }
+
         if (order.getEmployee() != null){
             orderUpdate.setEmployee(order.getEmployee());
         }
@@ -133,7 +130,7 @@ public class OrderHibernateDAO implements OrderDAO{
             orderUpdate.setShippedDate(order.getShippedDate());
         }
 
-        if ((Double)order.getFreight() != null){
+        if ((Double)order.getFreight() != 0){
             orderUpdate.setFreight(order.getFreight());
         }
 

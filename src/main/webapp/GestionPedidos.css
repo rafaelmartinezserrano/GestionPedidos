@@ -40,10 +40,24 @@
 #final{
 	margin-top: 150px;
 }
-#listaCategoryDiv{
+
+.listaCategoryDiv {
 	padding-top: 30px;
+	padding-bottom: 20px;
 	justify-content: center;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: 3px;
 	width: 25%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: pink;
+	border-radius: 30px;
+	
+}
+
+.listaCategoryDiv li{
+	list-style-type: none;
 }
 

@@ -24,7 +24,7 @@
     <servlet-name>IniciarSesion</servlet-name>
     <url-pattern>/IniciarSesion</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>FindProductByCategory</display-name>
     <servlet-name>FindProductByCategory</servlet-name>
@@ -93,5 +93,45 @@
   <servlet-mapping>
     <servlet-name>CerrarSesionServlet</servlet-name>
     <url-pattern>/CerrarSession</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchClientsServlet</display-name>
+    <servlet-name>SearchClientsServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.SearchClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchClientsServlet</servlet-name>
+    <url-pattern>/SearchClients</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>LoadProductServlet</display-name>
+    <servlet-name>LoadProductServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.LoadProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoadProductServlet</servlet-name>
+    <url-pattern>/LoadProduct</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>CarritoCompraServlet</display-name>
+    <servlet-name>CarritoCompraServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.CarritoCompraServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CarritoCompraServlet</servlet-name>
+    <url-pattern>/CarritoCompra</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateProductServlet</display-name>
+    <servlet-name>UpdateProductServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.UpdateProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateProductServlet</servlet-name>
+    <url-pattern>/UpdateProduct</url-pattern>
   </servlet-mapping>
 </web-app>

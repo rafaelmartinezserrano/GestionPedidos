@@ -33,12 +33,10 @@
 	<div id="nav">
 		<nav>
 			<ul>
-				<li><a href="BusquedaCategory">Buscar Productos por
-						Categoria</a></li>
-				<li><a href="buscarProductosPorId.jsp">Buscar Productos por
-						Id</a></li>
+				<li><a href="BusquedaCategory">Buscar Productos por Categoria</a></li>
+				<li><a href="buscarProductosPorId.jsp">Buscar Productos por Id</a></li>
 				<li><a href="AltaNuevoEmpleado.jsp">Alta Nuevo Empleado</a></li>
-					
+				<li><a href="SearchClients">Buscar clientes</a></li>
 			</ul>
 		</nav>
 	</div>

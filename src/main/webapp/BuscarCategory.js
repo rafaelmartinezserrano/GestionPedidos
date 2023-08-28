@@ -26,10 +26,11 @@ function imprimirCategory (lista) {
 	let textoCategory = "";
 	for (let producto of lista ) {
 		textoCategory = textoCategory + 
-		`<ul class="listaCategoryDiv">
+		`<ul class="listaCategoryDiv" class="border border-dark-subtle">
 			<li> Producto: <span>${producto.productName}</span></li>
 			<li> Precio: <span>${producto.unitPrice}</span></li>
-			<input type="button" value="Anadir al Carrito" class="btn btn-light" style="background-color: #F279B2" onclick=""/>
+			<input type="button" value="Sumar al Carrito" class="btn btn-light" style="background-color: #F279B2" onclick=""/>
+			<li><a href="LoadProduct?busquedaId=${producto.productID}"> Modificar datos producto</a></li>
          </ul>`;
          
 	}

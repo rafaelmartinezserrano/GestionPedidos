@@ -18,8 +18,24 @@ import com.afdm.gestionpedidos.model.dao.OrderHibernateDAO;
 import com.afdm.gestionpedidos.model.dao.ProductDAO;
 import com.afdm.gestionpedidos.model.dao.ProductHibernateDAO;
 
+/**
+ * 
+ * @author rafa
+ *
+ */
 public class GestionPedidosFacade implements GestionPedidosDelegate {
 
+
+	/**
+	 * Método que comprueba el inicio de sesión de un usuario
+	 * @implSpec  {@link GestionPedidosDelegate#login(String, String, String)} login en GestionPedidosDelegate
+	 * @return true si el usuario existe y false en caso contrario
+	 * @throws LoginIncorrectoException cuando el usuario está mal
+	 * @param tipo Cadena de texto que puede valer "employee" o "customer"
+	 * @param nombre
+	 * @param apellidos
+	 * @author rafa
+	 */
 	@Override
 	public boolean login(String tipo, String nombre, String apellidos) {
 		boolean correcto = false;
@@ -78,6 +94,13 @@ public class GestionPedidosFacade implements GestionPedidosDelegate {
 	public boolean updateProduct(Product producto) {
 		ProductDAO dao = new ProductHibernateDAO();
 		return dao.updateProduct(producto);
+	}
+
+	@Override
+	public List<Customer> findAllCustomer() {
+		CustomerDAO dao = new CustomerHibernateDAO();
+		// TODO Auto-generated method stub
+		return dao.findAllCustomer();
 	}
 
 

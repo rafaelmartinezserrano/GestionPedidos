@@ -229,6 +229,8 @@ public class Orders {
 	}
 	
 	
-	
+	public void addOD(OrderDetail od) {
+		this.orderDetail.add(od);
+	}
 	
 }
