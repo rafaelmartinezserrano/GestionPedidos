@@ -32,7 +32,7 @@
         </div>
 
         <div id="container">
-          <form class="formulario"  action="/UpdateProduc" method="post">
+          <form class="formulario"  action="UpdateProduct" method="post">
             <div>
                 <label>Categoria: <%= product.getCategory() %></label>
                 <label>Nombre del producto: <%= product.getProductName() %></label>
@@ -58,7 +58,7 @@
 	        </div>-->
 
 	        <div>
-	            <input type="button" value="Upload">
+	            <input class ="btn btn-light button" style="background-color: #F279B2" type="submit" value="Upload">
 	        </div>
           </form>
 
@@ -72,7 +72,7 @@
             <li class="nav-item"><a href="CerrarSession" class="nav-link px-2 text-muted">Salir</a></li>
           </ul>
 
-          <p class="text-center text-muted">� 2023 AFDM</p>
+          <p class="text-center text-muted">&copy; 2023 AFDM</p>
     </footer>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
