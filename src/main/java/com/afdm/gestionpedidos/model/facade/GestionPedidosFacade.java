@@ -91,9 +91,9 @@ public class GestionPedidosFacade implements GestionPedidosDelegate {
 	}
 	
 	@Override
-	public boolean updateProduct(Product producto) {
+	public boolean updateProduct(int idProducto, double price, int stock) {
 		ProductDAO dao = new ProductHibernateDAO();
-		return dao.updateProduct(producto);
+		return dao.updateProduct(idProducto, price, stock);
 	}
 
 	@Override

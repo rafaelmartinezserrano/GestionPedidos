@@ -31,9 +31,12 @@
           <img id="fotoPrincipalBusqueda" src="Imagenes/modificarProducto.png" class="img-fluid fotoPrincipal" alt="Modificar producto">
         </div>
 
+		<% if (product != null) { %>
+
         <div id="container">
           <form class="formulario"  action="UpdateProduct" method="post">
             <div>
+            	<input type="hidden" name="productID" value="<%= product.getProductID() %>"/>
                 <label>Categoria: <%= product.getCategory() %></label>
                 <label>Nombre del producto: <%= product.getProductName() %></label>
                 <label>Precio por unidad: <%= product.getQuantityPerUnit() %></label>
@@ -64,7 +67,10 @@
 
          </div>
        		<div id="listaCategoryDiv" class="fieldset "> </div>
-
+	<% } else { %>
+		<% String mensaje = (String) request.getAttribute("mensaje"); %>
+		<div><%=mensaje %></div>
+	<% } %>
       <footer id="final">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item"><a href="paginaInicial.html" class="nav-link px-2 text-muted">Inicio</a></li>

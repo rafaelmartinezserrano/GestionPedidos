@@ -18,19 +18,14 @@ public class UpdateProductServlet extends HttpServlet {
    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Category category = (Category)request.getAttribute("category");
-		String productName = request.getParameter("productName");
-		String quantity = request.getParameter("quantityPerUnit");
+		//Category category = (Category)request.getAttribute("category");
+		int idProducto = Integer.parseInt(request.getParameter("productID"));
 		double price = Double.parseDouble(request.getParameter("unitPrice"));
 		int stock = Integer.parseInt(request.getParameter("unitsInStock"));
-		int units = Integer.parseInt(request.getParameter("unitsOnOrder"));
-		String reorderLevel = request.getParameter("reorderLevel");
-		boolean discontinued = 		Boolean.parseBoolean(request.getParameter("discontinued"));
 		GestionPedidosDelegate facade = new GestionPedidosFacade();
 		
 		try {	
-			Product updateProduct = new Product(category, productName, quantity,price, stock, units, 			reorderLevel,discontinued);
-			boolean modificado = facade.updateProduct(updateProduct);
+			boolean modificado = facade.updateProduct(idProducto, price, stock);
 			
 			if(modificado) {				
 				request.setAttribute("mensaje","Se ha modificado correctamente");

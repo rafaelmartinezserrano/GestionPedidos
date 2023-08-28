@@ -24,7 +24,7 @@ public interface GestionPedidosDelegate {
 
 	boolean registerEmployee(Employee employee);
 
-	boolean updateProduct(Product producto);
+	boolean updateProduct(int idProducto, double price, int stock);
 	
 	public List<Customer> findAllCustomer();
 	

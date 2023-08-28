@@ -5,6 +5,8 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.MutationQuery;
+import org.hibernate.query.Query;
 
 import com.afdm.gestionpedidos.model.Category;
 import com.afdm.gestionpedidos.model.Orders;
@@ -86,13 +88,17 @@ public class ProductHibernateDAO implements ProductDAO {
 	}
 
 	@Override
-	public boolean updateProduct(Product producto) {
+	public boolean updateProduct(int idProduct, double price, int stock) {
 		
 		boolean insertado = true;
 		Session sesion = DaoUtility.getSession();
 		Transaction transaction = sesion.beginTransaction();
 		try {
-			sesion.merge(producto);
+			MutationQuery query = sesion.createMutationQuery("update Product p set p.unitPrice = :precio, p.unitsInStock = :stock where p.productID = :productID");
+			query.setParameter("precio", price);
+			query.setParameter("stock", stock);
+			query.setParameter("productID", idProduct);
+			query.executeUpdate();
 			transaction.commit();
 			sesion.close();
 		} catch (HibernateException e) {
