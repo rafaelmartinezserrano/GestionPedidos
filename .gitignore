@@ -5,6 +5,9 @@
 .gitignore
 .idea/
 
+# Documentation
+doc/
+
 # Compiled class file
 *.class
 
