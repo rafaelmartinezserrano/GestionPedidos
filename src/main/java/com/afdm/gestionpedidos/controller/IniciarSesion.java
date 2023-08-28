@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import com.afdm.gestionpedidos.model.carrito.Carrito;
 import com.afdm.gestionpedidos.model.facade.GestionPedidosDelegate;
 import com.afdm.gestionpedidos.model.facade.GestionPedidosFacade;
 
@@ -34,6 +35,13 @@ public class IniciarSesion extends HttpServlet {
 		}
 		if (login) {
 			request.getSession().setAttribute("usuario", nombre);
+			
+			
+			if(tipo.equals("customer")) {
+				Carrito carrito = new Carrito(customerID);
+				request.getSession().setAttribute("carrito", carrito);
+				
+			}
 			response.sendRedirect("principal.jsp");
 		} else {
 			request.setAttribute("error", "Datos no encontrados.");
