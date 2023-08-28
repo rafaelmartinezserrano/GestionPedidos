@@ -80,5 +80,12 @@ public class GestionPedidosFacade implements GestionPedidosDelegate {
 		return dao.updateProduct(producto);
 	}
 
+	@Override
+	public List<Customer> findAllCustomer() {
+		CustomerDAO dao = new CustomerHibernateDAO();
+		// TODO Auto-generated method stub
+		return dao.findAllCustomer();
+	}
+
 
 }
