@@ -13,18 +13,19 @@
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
 <link rel="stylesheet" href="principal.css" type="text/css">
+<link rel="stylesheet" href="carrito.css" type="text/css">
 </head>
 <body>
 	<div id="barra">
 		<nav class="navbar navbar-light" style="background-color: #F279B2;">
 			<div class="container-fluid">
 				<a class="navbar-brand">Gestion de Pedidos</a>
-				
+				<a href="carrito.jsp" class="navbar-brand"><img alt="carritoCompra" src="Imagenes/carritoNav.png" id="carritoNav"></a>
 			</div>
 		</nav>
 	</div>
 	<div id="divFoto">
-		<img id="foto" src="imgbusqueda.png" alt="Imagen Principal">
+		<img id="foto" src="Imagenes/imgbusqueda.png" alt="Imagen Principal">
 	</div>
 	<div id="menu">
 		<h3>Menú</h3>
@@ -43,8 +44,10 @@
 	</div>
 	<footer>
 		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-			<li class="nav-item"><a href="inicioSesion.jsp"
+			<li class="nav-item"><a href="principal.jsp"
 				class="nav-link px-2 text-muted">Inicio</a></li>
+				<li class="nav-item"><a href="carrito.jsp"
+				class="nav-link px-2 text-muted"><img alt="carritoCompra" src="Imagenes/carritoFooter.png" id="carritoFooter"></a></li>
 			<li class="nav-item"><a href="CerrarSession"
 				class="nav-link px-2 text-muted">Salir</a></li>
 		</ul>
