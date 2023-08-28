@@ -44,7 +44,7 @@
 						<input type="number" readonly="readonly" value="<%=${i.quantity} %>" id="quantity">
 						<input type="button" value="+" id="btnAddOne" onclick="changeQuantity(1, ${i.product.productID});">
 					<div class="prodDetail">
-						<%=${i.product} %>
+						<${i.product}>
 					</div>
 					</div>
 					<div class="btnDelete_box" id="btnDeleteAll">

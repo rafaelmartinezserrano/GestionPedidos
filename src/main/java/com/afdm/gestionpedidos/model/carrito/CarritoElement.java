@@ -56,7 +56,7 @@ public class CarritoElement {
 		if (getClass() != obj.getClass())
 			return false;
 		CarritoElement other = (CarritoElement) obj;
-		return Objects.equals(product, other.product);
+		return product.equals(other.product);
 	}
 	
 	

@@ -104,7 +104,7 @@
     <servlet-name>SearchClientsServlet</servlet-name>
     <url-pattern>/SearchClients</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>LoadProductServlet</display-name>
     <servlet-name>LoadProductServlet</servlet-name>
@@ -114,7 +114,7 @@
     <servlet-name>LoadProductServlet</servlet-name>
     <url-pattern>/LoadProduct</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <description></description>
     <display-name>CarritoCompraServlet</display-name>
     <servlet-name>CarritoCompraServlet</servlet-name>
@@ -133,5 +133,15 @@
   <servlet-mapping>
     <servlet-name>UpdateProductServlet</servlet-name>
     <url-pattern>/UpdateProduct</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteProductFromCarritoServlet</display-name>
+    <servlet-name>DeleteProductFromCarritoServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.DeleteProductFromCarritoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteProductFromCarritoServlet</servlet-name>
+    <url-pattern>/DeleteProductFromCarrito</url-pattern>
   </servlet-mapping>
 </web-app>
