@@ -28,7 +28,7 @@ function imprimirCategory (lista) {
 		textoCategory = textoCategory + 
 		`<ul class="listaCategoryDiv">
 			<li> Producto: <span>${producto.productName}</span></li>
-			<li> Precio: <span>${producto.unitPrice}</span></li>
+			<li> Precio:  <span>${producto.unitPrice}</span></li>
 			<input type="button" value="Anadir al Carrito" class="btn btn-light" style="background-color: #F279B2" onclick=""/>
          </ul>`;
          
