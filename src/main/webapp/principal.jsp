@@ -16,10 +16,12 @@
 <link rel="stylesheet" href="carrito.css" type="text/css">
 </head>
 <body>
+	<% String usuario = (String)session.getAttribute("usuario"); %>
 	<div id="barra">
 		<nav class="navbar navbar-light" style="background-color: #F279B2;">
 			<div class="container-fluid">
 				<a class="navbar-brand">Gestion de Pedidos</a>
+				Bienvenido <%=usuario %>
 				<a href="carrito.jsp" class="navbar-brand"><img alt="carritoCompra" src="Imagenes/carritoNav.png" id="carritoNav"></a>
 			</div>
 		</nav>
@@ -27,16 +29,23 @@
 	<div id="divFoto">
 		<img id="foto" src="Imagenes/imgbusqueda.png" alt="Imagen Principal">
 	</div>
+	<% String mensaje = (String)request.getAttribute("mensaje"); %>
+	<% if (mensaje != null) { %>
+		<div><%=mensaje %></div>
+	<% } %>
 	<div id="menu">
 		<h3>Menú</h3>
 	</div>
+	<% String tipoUsuario = (String)session.getAttribute("tipoUsuario"); %>
 	<div id="nav">
 		<nav>
 			<ul>
 				<li><a href="BusquedaCategory">Buscar Productos por Categoria</a></li>
 				<li><a href="buscarProductosPorId.jsp">Buscar Productos por Id</a></li>
-				<li><a href="AltaNuevoEmpleado.jsp">Alta Nuevo Empleado</a></li>
-				<li><a href="SearchClients">Buscar clientes</a></li>
+				<% if (tipoUsuario.equals("employee")) { %>
+					<li><a href="AltaNuevoEmpleado.jsp">Alta Nuevo Empleado</a></li>
+					<li><a href="SearchClients">Buscar clientes</a></li>
+				<% } %>
 			</ul>
 		</nav>
 	</div>

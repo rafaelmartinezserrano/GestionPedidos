@@ -34,13 +34,13 @@ public class IniciarSesion extends HttpServlet {
 			login = fachada.login(tipo, customerID, null);
 		}
 		if (login) {
-			request.getSession().setAttribute("usuario", nombre);
-			
-			
+			request.getSession().setAttribute("tipoUsuario", tipo);
 			if(tipo.equals("customer")) {
 				Carrito carrito = new Carrito(customerID);
 				request.getSession().setAttribute("carrito", carrito);
-				
+				request.getSession().setAttribute("usuario", customerID);
+			} else {
+				request.getSession().setAttribute("usuario", nombre);
 			}
 			response.sendRedirect("principal.jsp");
 		} else {

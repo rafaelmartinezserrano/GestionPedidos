@@ -26,7 +26,6 @@ public class DeleteProductFromCarritoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Carrito carrito = (Carrito)request.getSession().getAttribute("carrito");
 		int productId = Integer.parseInt(request.getParameter("prod"));
-		System.out.println("*******" + productId);
 		PrintWriter salida = response.getWriter();
 		if (carrito.removeFromCarrito(productId)) {
 				request.getSession().setAttribute("carrito", carrito);

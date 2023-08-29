@@ -144,4 +144,14 @@
     <servlet-name>DeleteProductFromCarritoServlet</servlet-name>
     <url-pattern>/DeleteProductFromCarrito</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ChangeQuantityFromCarritoServlet</display-name>
+    <servlet-name>ChangeQuantityFromCarritoServlet</servlet-name>
+    <servlet-class>com.afdm.gestionpedidos.controller.ChangeQuantityFromCarritoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChangeQuantityFromCarritoServlet</servlet-name>
+    <url-pattern>/ChangeQuantityFromCarrito</url-pattern>
+  </servlet-mapping>
 </web-app>

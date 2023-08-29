@@ -41,7 +41,7 @@
 				<li>
 					<div class="btn_box">
 						<input type="button" value="-" id="btnDeleteOne" onclick="changeQuantity(-1, ${i.product.productID});">
-						<input type="number" readonly="readonly" value="<%=${i.quantity} %>" id="quantity">
+						<input type="number" readonly="readonly" value="${i.quantity}" id="quantity">
 						<input type="button" value="+" id="btnAddOne" onclick="changeQuantity(1, ${i.product.productID});">
 					<div class="prodDetail">
 						<${i.product}>
