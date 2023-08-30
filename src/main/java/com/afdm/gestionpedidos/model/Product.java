@@ -29,6 +29,10 @@ public class Product {
 	
 	public Product() {}
 
+	public Product(int idProduct) {
+		this.productID = idProduct;
+	}
+	
 	public Product(Category category, int productID, String productName, String quantityPerUnit, double unitPrice,
 			int unitsIntStock, int unitsOnOrder, String reorderLevel, boolean discontinued) {
 		
@@ -135,7 +139,7 @@ public class Product {
 	@Override
 	public boolean equals(Object obj) {
 		boolean iguales = false;
-		if(obj != null && obj instanceof Customer) {
+		if(obj != null && obj instanceof Product) {
 			Product otro = (Product)obj;
 			iguales = this.productID == otro.productID;
 		}

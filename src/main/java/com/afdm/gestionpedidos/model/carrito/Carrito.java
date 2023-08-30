@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.afdm.gestionpedidos.model.Product;
+
 public class Carrito {
 	
 	private String idCustomer;
@@ -62,11 +64,11 @@ public class Carrito {
 	}
 
 	/**
-     Añade producto y cantidad al carrito.
+     Aï¿½ade producto y cantidad al carrito.
      <p>
-     Return true: Producto añadido.
+     Return true: Producto aï¿½adido.
      <p>
-     Return false: Producto no añadido, cantidad modificada en 1.
+     Return false: Producto no aï¿½adido, cantidad modificada en 1.
      <p>
      */
 	public boolean addToCarrito(CarritoElement e){
@@ -89,7 +91,9 @@ public class Carrito {
 		return this.listOD.remove(e);
 	}
 	
-	
+	public boolean removeFromCarrito(int idProduct) {
+		return this.listOD.remove(new CarritoElement(new Product(idProduct)));
+	}
 	
 	
 	public boolean modifyCarrito(CarritoElement e) {

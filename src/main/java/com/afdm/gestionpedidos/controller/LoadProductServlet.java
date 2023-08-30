@@ -34,7 +34,7 @@ public class LoadProductServlet extends HttpServlet {
 			if(product != null) {
 				
 				request.setAttribute("product", product);
-				response.sendRedirect("modificarProducto.jsp");
+				request.getRequestDispatcher("modificarProducto.jsp").forward(request, response);
 				
 			} 
 		} catch(Exception e) {

@@ -10,8 +10,6 @@
      <link type="image/x-icon" rel="icon" href="imagen/favicon.png"/>
      <link rel="stylesheet" href="altaEmpleado.css" type="text/css">
     <title>Alta Nuevo Empleado</title>
-    
-    <link rel="stylesheet" href="GestionPedidos.css" type="text/css">
 
 </head>
 <body>
@@ -28,7 +26,7 @@
       </div>
    	
 		  <div id="divFotoPrincipal">
-          <img id="fotoPrincipalBusqueda" src="Imagenes/imgprincipal.png" class="img-fluid fotoPrincipal" alt="Imagen Principal">
+          <img id="fotoPrincipalBusqueda" src="Imagenes/imgprin.png" class="img-fluid fotoPrincipal" alt="Imagen Principal">
         </div>
         
         <div id="container">
@@ -41,7 +39,7 @@
 	        
 	        <div>
 	            <label for="txtFirstName">Nombre:</label>
-	            <input type="text" id="txtFirstName" placeHolder="Nombre" name="FirstName" />
+	            <input type="text" id="txtFirstName" placeHolder="Nombre" name="firstName" />
 	        </div>
 	        
 	        <div>
@@ -50,7 +48,7 @@
 	        </div>
 	        <div class="select">
 	            <label for="selectTitleOfCourtesy">Tratamiento</label>
-	            <select id="selectTitleOfCourtesy" name="Title">
+	            <select id="selectTitleOfCourtesy" name="titleOfCourtesy">
 	            	<option value=""></option>
 	            	<option value="Mrs.">Mrs.</option>
 	            	<option value="Mr.">Mr.</option>
@@ -75,10 +73,6 @@
 	            <label for="txtCity">Ciudad</label>
 	            <input type="text" id="txtCity" placeholder="Ciudad" name="city"/>
 	        </div>
-	        <div>
-	            <label for="txtPostalCode">Código Postal</label>
-	            <input type="number" id="txtPostalCode" placeholder="Código Postal" name="postalCode"/>
-            </div>
             
             <div>
 	            <label for="txtRegion">Región</label>
@@ -89,7 +83,7 @@
 	            <input type="number" id="txtPostalCode" placeholder="Código Postal" name="postalCode"/>
 	        </div>
 	        <div>
-	            <label for="txtCpuntry">País</label>
+	            <label for="txtCountry">País</label>
 	            <input type="text" id="txtCountry" placeholder="país" name="country"/>
             
             

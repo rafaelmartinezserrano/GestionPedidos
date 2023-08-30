@@ -12,5 +12,5 @@ public interface ProductDAO {
 	
 	public List<Product> findProductByCategory(int categoryId);
 
-	public boolean updateProduct(Product producto);
+	public boolean updateProduct(int idProducto, double price, int stock);
 }

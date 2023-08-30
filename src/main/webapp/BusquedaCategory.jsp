@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +25,7 @@
   	</div>
   	
   <div id="divFotoPrincipal"> 
-     <img id="fotoPrincipalBusqueda" src="Imagenes/imgprincipal.png" class="img-fluid fotoPrincipal" alt="Imagen Principal">
+     <img id="fotoPrincipalBusqueda" src="Imagenes/imgprin.png" class="img-fluid fotoPrincipal" alt="Imagen Principal">
   </div>
   
 	 <% List<Category> lista=(List<Category>)request.getAttribute("categoryList"); %>

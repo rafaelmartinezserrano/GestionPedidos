@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+#carritoNav{
+	width: 2.5rem;
+}
+#carritoFooter{
+	width: 1.7rem;
+}
+#itemDelete{
+	width: 2rem;
+	cursor: pointer;
+}
+#carritoNav:hover, #itemDelete:hover{
+	transform: scale(1.25, 1.25);
+}
+.main{
+	margin: 20px 0;
+	text-align: center;
+	min-height: 700px;
+}
+#divFoto{
+	margin-bottom: 15px;
+}
